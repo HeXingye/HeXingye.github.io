@@ -146,22 +146,18 @@
 
                         
                         <li>
+                            <a href="/archive/">Archives</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
                             <a href="/bbs/">BBS</a>
                         </li>
                         
                     
 
-                        
-                        <li>
-                            <a href="/about/">About Me</a>
-                        </li>
-                        
-                    
-
-                        
-                        <li>
-                            <a href="/archive/">Archives</a>
-                        </li>
                         
                     
 
@@ -176,11 +172,15 @@
                     
 
                         
+                        <li>
+                            <a href="/tags/">Tags</a>
+                        </li>
+                        
                     
 
                         
                         <li>
-                            <a href="/tags/">Tags</a>
+                            <a href="/about/">About Me</a>
                         </li>
                         
                     
@@ -239,9 +239,11 @@
                 <h3><span id="hexo怎么插入图片">Hexo怎么插入图片</span></h3>
 <p>微博有时不带图片，总觉得说(mei)理(you)不(bi)清(ge)。<br>
 首先，我们假定图片不是来自于网络的，是本地图片。<br>
-研究了一下模版的微博，发现图片要放到一个同名的文件夹中，名字和md文件相同。<br>
-<img src="Hexo%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/2.png" alt="2"><br>
-还有另外两种方法：<br>
+研究了一下模版的微博，发现图片要放到一个同名的文件夹中，名字和md文件相同。</p>
+<img src="/2018/04/25/Hexo插入图片/2.png" title="Hexo插入图片">
+<p>具体代码为：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#123;%</span> <span class="string">asset_img</span> <span class="number">2.</span><span class="string">png</span> <span class="string">Hexo插入图片</span> <span class="string">%&#125;</span></span><br></pre></td></tr></table></figure>
+<p>还有另外两种方法：<br>
 使用本地路径：在hexo/source目录下新建一个img文件夹，将图片放入该文件夹下，插入图片时链接即为/img/图片名称。<br>
 使用微博图床，地址http://weibotuchuang.sinaapp.com/，将图片拖入区域中，会生成图片的URL，这就是链接地址。</p>
 

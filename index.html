@@ -136,22 +136,18 @@
 
                         
                         <li>
+                            <a href="/archive/">Archives</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
                             <a href="/bbs/">BBS</a>
                         </li>
                         
                     
 
-                        
-                        <li>
-                            <a href="/about/">About Me</a>
-                        </li>
-                        
-                    
-
-                        
-                        <li>
-                            <a href="/archive/">Archives</a>
-                        </li>
                         
                     
 
@@ -166,11 +162,15 @@
                     
 
                         
+                        <li>
+                            <a href="/tags/">Tags</a>
+                        </li>
+                        
                     
 
                         
                         <li>
-                            <a href="/tags/">Tags</a>
+                            <a href="/about/">About Me</a>
                         </li>
                         
                     
@@ -295,9 +295,10 @@ blog\themes\beantech\layout\index.ejs
 首先，我们假定图片不是来自于网络的，是本地图片。
 研究了一下模版的微博，发现图片要放到一个同名的文件夹中，名字和md文件相同。
 
+具体代码为：
+1&#123;% asset_img 2.png Hexo插入图片 %&#125;
 还有另外两种方法：
-使用本地路径：在hexo/source目录下新建一个img文件夹，将图片放入该文件夹下，插入图片时链接即为/img/图片名称。
-使用微博图床，地址ht......
+使用本地路径：在hexo/source目录下新建一个......
         </div>
     </a>
     
