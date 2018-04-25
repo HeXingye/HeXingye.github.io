@@ -3,7 +3,7 @@
 
 <!-- Head tag -->
 <head>
-    <meta charset="utf-8">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -58,7 +58,7 @@
     <![endif]-->
 
     <!-- ga & ba script hoook -->
-    <script></script>
+    <script></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 	
 </head>
 <script src="https://leancloud.cn/scripts/lib/av-0.4.6.min.js"></script>
@@ -68,7 +68,7 @@
 
 <!-- hack iOS CSS :active style -->
 <body ontouchstart="">
-	<!-- Modified by Yu-Hsuan Yen -->
+	<!-- hexo-inject:begin --><!-- hexo-inject:end --><!-- Modified by Yu-Hsuan Yen -->
 <!-- Post Header -->
 <style type="text/css">
     header.intro-header{
@@ -136,7 +136,7 @@
 
                         
                         <li>
-                            <a href="/photo/">相册</a>
+                            <a href="/about/">About Me</a>
                         </li>
                         
                     
@@ -144,19 +144,6 @@
                         
                         <li>
                             <a href="/archive/">Archives</a>
-                        </li>
-                        
-                    
-
-                        
-                    
-
-                        
-                    
-
-                        
-                        <li>
-                            <a href="/tags/">Tags</a>
                         </li>
                         
                     
@@ -170,7 +157,20 @@
 
                         
                         <li>
-                            <a href="/about/">About Me</a>
+                            <a href="/photo/">album</a>
+                        </li>
+                        
+                    
+
+                        
+                    
+
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/tags/">Tags</a>
                         </li>
                         
                     
@@ -233,8 +233,57 @@
 
 <div class="post-preview">
 
+    <a href="/2018/04/25/Hexo使用教程/">
+        <h2 class="post-title">
+		
+		<!-- 置顶 -->
+		
+          <i class="fa fa-thumb-tack"></i>
+          <font color=7D26CD>置顶</font>
+          <span class="post-meta-divider">|</span>
+        
+		
+            Hexo使用教程
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            
+添加置顶功能
+先在blog根目录下输入下面两行代码：
+12npm uninstall hexo-generator-index --savenpm install hexo-generator-index-pin-top --save
+然后打开：
+blog\themes\beantech\layout\index.ejs
+加入代码
+12345&lt;% if (post.top) &#12......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Xingye He on
+            2018-04-25
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#Hexo" title="Hexo">Hexo</a>
+            
+              <a href="/tags/#Blog" title="Blog">Blog</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
     <a href="/2017/03/18/hexo-theme-beantech/">
         <h2 class="post-title">
+		
+		<!-- 置顶 -->
+		
+		
             [Hexo] Theme BeanTech
         </h2>
         <h3 class="post-subtitle">
@@ -302,7 +351,11 @@ I publish the whole project f......
     <div class="tags">
         
             
+            <a href="/tags/#Hexo" title="Hexo" rel="2">Hexo</a>
+            
         
+            
+            <a href="/tags/#Blog" title="Blog" rel="2">Blog</a>
             
         
     </div>
@@ -375,11 +428,32 @@ I publish the whole project f......
     <ul>
       
         <li>
+          <a href="/2018/04/25/Hexo使用教程/">Hexo使用教程</a>
+        </li>
+      
+        <li>
           <a href="/2017/03/18/hexo-theme-beantech/">[Hexo] Theme BeanTech</a>
         </li>
       
     </ul>
   </div>
+
+        <hr>
+    
+        <!-- Categories -->
+
+    <h5>categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a><span class="category-list-count">1</span></li></ul>
+    </div>
+
+        <hr>
+    
+        
+    <h5>ARCHIVES</h5>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">1</span></li></ul>
+    </div>
 
         <hr>
     
@@ -720,7 +794,7 @@ $(function(){
     <script type="text/javascript" src="/js/toc.js?v=1.0.0" async=""></script>
 <!-- Image to hack wechat -->
 <img src="https://www.xingyehe.top/img/icon_wechat.png" width="0" height="0" />
-<!-- Migrate from head to bottom, no longer block render and still work -->
+<!-- Migrate from head to bottom, no longer block render and still work --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 </body>
 
