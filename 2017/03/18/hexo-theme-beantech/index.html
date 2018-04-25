@@ -3,7 +3,7 @@
 
 <!-- Head tag -->
 <head>
-    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -58,7 +58,7 @@
     <![endif]-->
 
     <!-- ga & ba script hoook -->
-    <script></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+    <script></script>
 	
 </head>
 <script src="https://leancloud.cn/scripts/lib/av-0.4.6.min.js"></script>
@@ -68,7 +68,7 @@
 
 <!-- hack iOS CSS :active style -->
 <body ontouchstart="">
-	<!-- hexo-inject:begin --><!-- hexo-inject:end --><!-- Modified by Yu-Hsuan Yen -->
+	<!-- Modified by Yu-Hsuan Yen -->
 <!-- Post Header -->
 <style type="text/css">
     header.intro-header{
@@ -146,18 +146,15 @@
 
                         
                         <li>
-                            <a href="/photo/">album</a>
+                            <a href="/bbs/">BBS</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/bbs/">BBS</a>
+                            <a href="/about/">About Me</a>
                         </li>
-                        
-                    
-
                         
                     
 
@@ -169,8 +166,11 @@
                     
 
                         
+                    
+
+                        
                         <li>
-                            <a href="/about/">About Me</a>
+                            <a href="/photo/">Album</a>
                         </li>
                         
                     
@@ -308,7 +308,7 @@ Peace!</p>
                 
                 <!-- 多说 Share end-->
 
-                <!-- 多说评论框 start -->
+				 <!-- 多说评论框 start -->
                 
                 <!-- 多说评论框 end -->
 
@@ -321,6 +321,24 @@ Peace!</p>
                 <!-- disqus comment end -->
             </div>
             
+			<!--评论显示区，请插入合适的位置-->
+               <div class="comment"></div>
+			 <!--载入js，在</body>之前插入即可-->
+    <!--Leancloud 操作库:-->
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <!--Valine 的核心代码库-->
+    <script src="./dist/Valine.min.js"></script>
+    <script>
+        new Valine({
+            av: AV, 
+            el: '.comment',
+            app_id: 'iXRAffhDC41rn9yQsrL7l9WM-gzGzoHsz', 
+            app_key: '3LV21YhDUcoQfa1IEii3TTqM',
+            placeholder: ' ', 
+        });
+    </script>
+	
+	
             <!-- Tabe of Content -->
             <!-- Table of Contents -->
 
@@ -336,7 +354,7 @@ Peace!</p>
     
 
 
-
+     <!-- 原来是 partial('_partial/toc')-->
                 
             <!-- Sidebar Container -->
             <div class="
@@ -370,7 +388,7 @@ Peace!</p>
                     
                         <li><a href="http://www.tianhao.site/" target="_blank">Tianhao&#39;s Blog</a></li>
                     
-                        <li><a href="http://huangxuan.me" target="_blank">仇博&#39;s Blog</a></li>
+                        <li><a href="http://remilitarize.space/" target="_blank">仇博&#39;s Blog</a></li>
                     
                 </ul>
                 
@@ -739,7 +757,8 @@ $(function(){
     <script type="text/javascript" src="/js/toc.js?v=1.0.0" async=""></script>
 <!-- Image to hack wechat -->
 <img src="https://www.xingyehe.top/img/icon_wechat.png" width="0" height="0" />
-<!-- Migrate from head to bottom, no longer block render and still work --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<!-- Migrate from head to bottom, no longer block render and still work -->
+
 
 </body>
 

@@ -3,7 +3,7 @@
 
 <!-- Head tag -->
 <head>
-    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -58,7 +58,7 @@
     <![endif]-->
 
     <!-- ga & ba script hoook -->
-    <script></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+    <script></script>
 	
 </head>
 <script src="https://leancloud.cn/scripts/lib/av-0.4.6.min.js"></script>
@@ -68,7 +68,7 @@
 
 <!-- hack iOS CSS :active style -->
 <body ontouchstart="">
-	<!-- hexo-inject:begin --><!-- hexo-inject:end --><!-- Modified by Yu-Hsuan Yen -->
+	<!-- Modified by Yu-Hsuan Yen -->
 <!-- Post Header -->
 <style type="text/css">
     header.intro-header{
@@ -136,18 +136,15 @@
 
                         
                         <li>
-                            <a href="/photo/">album</a>
+                            <a href="/bbs/">BBS</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/bbs/">BBS</a>
+                            <a href="/about/">About Me</a>
                         </li>
-                        
-                    
-
                         
                     
 
@@ -159,8 +156,11 @@
                     
 
                         
+                    
+
+                        
                         <li>
-                            <a href="/about/">About Me</a>
+                            <a href="/photo/">Album</a>
                         </li>
                         
                     
@@ -278,6 +278,47 @@ blog\themes\beantech\layout\index.ejs
 
 <div class="post-preview">
 
+    <a href="/2018/04/25/Hexo插入图片/">
+        <h2 class="post-title">
+		
+		<!-- 置顶 -->
+		
+		
+            Hexo插入图片
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            Hexo怎么插入图片
+微博有时不带图片，总觉得说(mei)理(you)不(bi)清(ge)。
+首先，我们假定图片不是来自于网络的，是本地图片。
+研究了一下模版的微博，发现图片要放到一个同名的文件夹中，名字和md文件相同。
+
+还有另外两种方法：
+使用本地路径：在hexo/source目录下新建一个img文件夹，将图片放入该文件夹下，插入图片时链接即为/img/图片名称。
+使用微博图床，地址ht......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Xingye He on
+            2018-04-25
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#Hexo" title="Hexo">Hexo</a>
+            
+              <a href="/tags/#Blog" title="Blog">Blog</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
     <a href="/2017/03/18/hexo-theme-beantech/">
         <h2 class="post-title">
 		
@@ -351,11 +392,11 @@ I publish the whole project f......
     <div class="tags">
         
             
-            <a href="/tags/#Hexo" title="Hexo" rel="2">Hexo</a>
+            <a href="/tags/#Hexo" title="Hexo" rel="3">Hexo</a>
             
         
             
-            <a href="/tags/#Blog" title="Blog" rel="2">Blog</a>
+            <a href="/tags/#Blog" title="Blog" rel="3">Blog</a>
             
         
     </div>
@@ -428,6 +469,10 @@ I publish the whole project f......
     <ul>
       
         <li>
+          <a href="/2018/04/25/Hexo插入图片/">Hexo插入图片</a>
+        </li>
+      
+        <li>
           <a href="/2018/04/25/Hexo使用教程/">Hexo使用教程</a>
         </li>
       
@@ -452,7 +497,7 @@ I publish the whole project f......
         
     <h5>ARCHIVES</h5>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">1</span></li></ul>
     </div>
 
         <hr>
@@ -467,7 +512,7 @@ I publish the whole project f......
     
         <li><a href="http://www.tianhao.site/" target="_blank">Tianhao&#39;s Blog</a></li>
     
-        <li><a href="http://huangxuan.me" target="_blank">仇博&#39;s Blog</a></li>
+        <li><a href="http://remilitarize.space/" target="_blank">仇博&#39;s Blog</a></li>
     
 </ul>
 
@@ -794,7 +839,8 @@ $(function(){
     <script type="text/javascript" src="/js/toc.js?v=1.0.0" async=""></script>
 <!-- Image to hack wechat -->
 <img src="https://www.xingyehe.top/img/icon_wechat.png" width="0" height="0" />
-<!-- Migrate from head to bottom, no longer block render and still work --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<!-- Migrate from head to bottom, no longer block render and still work -->
+
 
 </body>
 
