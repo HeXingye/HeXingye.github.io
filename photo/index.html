@@ -67,7 +67,7 @@
 	        
 				<li><a href="/bbs">留言板</a></li>
 	        
-				<li><a href="/archive">归档</a></li>
+				<li><a href="/archives">归档</a></li>
 	        
 			</ul>
 		</nav>
@@ -161,7 +161,7 @@
 		        
 					<li style="width: 20%"><a href="/bbs">留言板</a></li>
 		        
-					<li style="width: 20%"><a href="/archive">归档</a></li>
+					<li style="width: 20%"><a href="/archives">归档</a></li>
 		        
 				</ul>
 			</nav>
@@ -181,12 +181,6 @@
     
       <header class="article-header">
         
-
-
-    
-
-
-
   
     <h1 class="article-title" itemprop="name">
       相册
@@ -343,6 +337,22 @@
   
 
   
+  <div id="gitment-ctn"></div> 
+<link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
+<script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  id: "https://www.xingyehe.top/photo/index.html",
+  owner: 'HeXingye',
+  repo: 'https://github.com/HeXingye/HeXingye.github.io',
+  oauth: {
+    client_id: '12103f1450720b6f98e1',
+    client_secret: '46c0d5b0da2d983e8def35cfe859a130914caa0b',
+  },
+})
+gitment.render('gitment-ctn')
+</script>
+  
 
 
           </div>
@@ -354,12 +364,19 @@
     	<div class="footer-left">
     		&copy; 2018 Xingye He
     	</div>
+		
+		<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+        <span id="busuanzi_container_site_pv">
+        本站总访问量：<span id="busuanzi_value_site_pv"></span>
+        </span>
+		
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
       	</div>
     </div>
   </div>
 </footer>
+
     </div>
     <script>
 	var yiliaConfig = {

@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="Whisper of wind">
 <meta property="og:description" content="添加置顶功能先在blog根目录下输入下面两行代码：12npm uninstall hexo-generator-index --savenpm install hexo-generator-index-pin-top --save 然后打开：blog\themes\beantech\layout\index.ejs 加入代码12345&amp;lt;% if (post.top) &amp;#123;%&amp;gt">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-04-26T04:35:16.648Z">
+<meta property="og:updated_time" content="2018-04-26T06:11:26.405Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo使用教程">
 <meta name="twitter:description" content="添加置顶功能先在blog根目录下输入下面两行代码：12npm uninstall hexo-generator-index --savenpm install hexo-generator-index-pin-top --save 然后打开：blog\themes\beantech\layout\index.ejs 加入代码12345&amp;lt;% if (post.top) &amp;#123;%&amp;gt">
@@ -68,7 +68,7 @@
 	        
 				<li><a href="/bbs">留言板</a></li>
 	        
-				<li><a href="/archive">归档</a></li>
+				<li><a href="/archives">归档</a></li>
 	        
 			</ul>
 		</nav>
@@ -162,7 +162,7 @@
 		        
 					<li style="width: 20%"><a href="/bbs">留言板</a></li>
 		        
-					<li style="width: 20%"><a href="/archive">归档</a></li>
+					<li style="width: 20%"><a href="/archives">归档</a></li>
 		        
 				</ul>
 			</nav>
@@ -182,16 +182,6 @@
     
       <header class="article-header">
         
-
-
-    
-    <i class="fa fa-thumb-tack"></i>
-    <font color=7D26CD>置顶</font>
-    <span class="post-meta-divider">|</span>
-    
-
-
-
   
     <h1 class="article-title" itemprop="name">
       Hexo使用教程
@@ -274,6 +264,17 @@
 	</div>
 
       
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Hexo//" class="article-tag-list-link color5">Hexo</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
       
 
@@ -390,6 +391,22 @@
   
 
   
+  <div id="gitment-ctn"></div> 
+<link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
+<script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  id: "https://www.xingyehe.top/2018/04/25/Hexo使用教程/",
+  owner: 'HeXingye',
+  repo: 'https://github.com/HeXingye/HeXingye.github.io',
+  oauth: {
+    client_id: '12103f1450720b6f98e1',
+    client_secret: '46c0d5b0da2d983e8def35cfe859a130914caa0b',
+  },
+})
+gitment.render('gitment-ctn')
+</script>
+  
 
 
           </div>
@@ -401,12 +418,19 @@
     	<div class="footer-left">
     		&copy; 2018 Xingye He
     	</div>
+		
+		<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+        <span id="busuanzi_container_site_pv">
+        本站总访问量：<span id="busuanzi_value_site_pv"></span>
+        </span>
+		
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
       	</div>
     </div>
   </div>
 </footer>
+
     </div>
     <script>
 	var yiliaConfig = {
