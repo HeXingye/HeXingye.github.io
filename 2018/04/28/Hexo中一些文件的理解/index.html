@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="Whisper of wind">
 <meta property="og:description" content="1.引子 这篇文章是为了帮助所有初次接触Hexo的人  1.1 动态页面和静态页面首先，我们要了解一下动态页面和静态页面的区别，通俗来讲  静态页面：静态页面就是设计者把页面上所有东西都设定好、做死了，然后放上去，不管是谁在任何时候看到的页面内容都是一样的，一成不变。动态页面：依靠服务器端的程序来生成的，不同人、不同时候访问页面，显示的内容都可能不同。比如大学期间用的java+servelet+数">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-04-28T08:03:10.733Z">
+<meta property="og:updated_time" content="2018-04-28T08:29:16.622Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo中一些文件的理解">
 <meta name="twitter:description" content="1.引子 这篇文章是为了帮助所有初次接触Hexo的人  1.1 动态页面和静态页面首先，我们要了解一下动态页面和静态页面的区别，通俗来讲  静态页面：静态页面就是设计者把页面上所有东西都设定好、做死了，然后放上去，不管是谁在任何时候看到的页面内容都是一样的，一成不变。动态页面：依靠服务器端的程序来生成的，不同人、不同时候访问页面，显示的内容都可能不同。比如大学期间用的java+servelet+数">
@@ -243,6 +243,7 @@
 <p>静态页面：静态页面就是设计者把页面上所有东西都设定好、做死了，然后放上去，不管是谁在任何时候看到的页面内容都是一样的，一成不变。<br>动态页面：依靠服务器端的程序来生成的，不同人、不同时候访问页面，显示的内容都可能不同。<br>比如大学期间用的java+servelet+数据库 就是动态的页面。<br>我们这里的Hexo是静态页面，我们上传的public文件，都是hexo生成好的! 所以我们在 <code>hexo d</code> 执行前，我们先要用到 <code>hexo generate</code> 这条命令。</p>
 </blockquote>
 <h4 id="1-2-Html文件"><a href="#1-2-Html文件" class="headerlink" title="1.2 Html文件"></a>1.2 Html文件</h4><p>如果你读懂了我刚才说的，那么我们在利用Hexo创建博客时，一切基于Html的文档的修改都是毫无意义的！<br>因为这些都是静态文件，当你每次执行Hexo d以后，他们会再次生成，并且被覆盖！<br>所以，有时碰到乱码问题，我们都要Hexo clean， 这就是为了清楚缓存的Html文件。</p>
+<a id="more"></a>
 <h4 id="1-3-git文件夹"><a href="#1-3-git文件夹" class="headerlink" title="1.3 git文件夹"></a>1.3 git文件夹</h4><p>这个和服务器有关，相当于一个衔接我们电脑和github的工具，用来帮我们上传我们的文件，未必一定是我们的博客。</p>
 <h4 id="1-4-github文件夹"><a href="#1-4-github文件夹" class="headerlink" title="1.4 github文件夹"></a>1.4 github文件夹</h4><p>程序员三宝之一，一句话：一个仓库，里面藏着各种东西！</p>
 <h3 id="2-文件结构剖析"><a href="#2-文件结构剖析" class="headerlink" title="2.文件结构剖析"></a>2.文件结构剖析</h3><h4 id="2-1-根目录文件解释"><a href="#2-1-根目录文件解释" class="headerlink" title="2.1 根目录文件解释"></a>2.1 根目录文件解释</h4><p>根目录下主要文件：<br>1.git文件： 分布式系统文件，发布东西用的<br>2.scaffolds：你生成博客里面的排头文件包括啥，如果要增加用户博文选择，可能会要修改post.md文件，比如增加一个tags标签。但这个功能能否实现，是由js文件作用的。<br>3.source: 发布的博文以及其图片资源，分类目录，文件命名必须和 <code>_config.yml</code> 一致！<br>4.themes: 博客的风格，主题，我们可以去Hexo主题官网下载我们需要的主题。<a href="https://www.zhihu.com/question/24422335/answer/46357100" target="_blank" rel="noopener">有哪些好看的 Hexo 主题？ - 家顺张的回答 - 知乎</a> </p>
@@ -639,19 +640,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">blog</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Blog</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Html</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">连接</a>
+                <a href="javascript:void(0)" class="js-tag color5">blog</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -660,6 +653,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Html</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">连接</a>
               </li>
             
             <div class="clearfix"></div>
