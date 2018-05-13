@@ -174,6 +174,121 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Hexo中一些文件的理解" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/04/28/Hexo中一些文件的理解/">Hexo中一些文件的理解</a>
+    </h1>
+  
+
+<p>
+
+  <a href="javascript:;" class="archive-article-date">
+      <i class="icon-smile icon"></i> |阅读人数：<span id="/2018/04/28/Hexo中一些文件的理解/" class="pageViews">人</span>
+	  <span class="post-count">|总字数：724字</span>
+	  <span class="post-count">|阅读时长：3分</span>
+  </a>
+</p> 
+
+        
+        <a href="/2018/04/28/Hexo中一些文件的理解/" class="archive-article-date">
+  	<time datetime="2018-04-27T16:13:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-28</time>
+</a>
+        
+      </header>
+    
+	
+	<!-- 目录内容 -->
+             
+        <!-- 目录内容结束 -->
+		
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1-引子"><a href="#1-引子" class="headerlink" title="1.引子"></a>1.引子</h3><blockquote>
+<p>这篇文章是为了帮助所有初次接触Hexo的人</p>
+</blockquote>
+<h4 id="1-1-动态页面和静态页面"><a href="#1-1-动态页面和静态页面" class="headerlink" title="1.1 动态页面和静态页面"></a>1.1 动态页面和静态页面</h4><p>首先，我们要了解一下动态页面和静态页面的区别，通俗来讲</p>
+<blockquote>
+<p>静态页面：静态页面就是设计者把页面上所有东西都设定好、做死了，然后放上去，不管是谁在任何时候看到的页面内容都是一样的，一成不变。<br>动态页面：依靠服务器端的程序来生成的，不同人、不同时候访问页面，显示的内容都可能不同。<br>比如大学期间用的java+servelet+数据库 就是动态的页面。<br>我们这里的Hexo是静态页面，我们上传的public文件，都是hexo生成好的! 所以我们在 <code>hexo d</code> 执行前，我们先要用到 <code>hexo generate</code> 这条命令。</p>
+</blockquote>
+<h4 id="1-2-Html文件"><a href="#1-2-Html文件" class="headerlink" title="1.2 Html文件"></a>1.2 Html文件</h4><p>如果你读懂了我刚才说的，那么我们在利用Hexo创建博客时，一切基于Html的文档的修改都是毫无意义的！<br>因为这些都是静态文件，当你每次执行Hexo d以后，他们会再次生成，并且被覆盖！<br>所以，有时碰到乱码问题，我们都要Hexo clean， 这就是为了清楚缓存的Html文件。</p>
+        
+          <a class="article-more-a" href="/2018/04/28/Hexo中一些文件的理解/#more">more >></a>
+        
+      
+
+      
+	  				
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Hexo</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">blog</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Hexo//" class="article-tag-list-link color5">Hexo</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/04/28/Hexo中一些文件的理解/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+ 
+
+  
     <article id="post-感受" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -634,7 +749,7 @@
         本站总访问量：<span id="busuanzi_value_site_pv"></span>
         </span>
 		
-        <span class="post-count">| 总字数4.9k字</span>
+        <span class="post-count">| 总字数5.0k字</span>
 		   
 		<span id="timeDate">载入天数...</span>
 		<span id="times">载入时分秒...</span> 
@@ -794,18 +909,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">blog</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Blog</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">UCSC</a>
               </li>
              
@@ -814,7 +917,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Blog</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">blog</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">yilia</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">论文</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -827,10 +946,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随笔</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">论文</a>
               </li>
             
             <div class="clearfix"></div>
