@@ -174,6 +174,124 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-VM的linux系统虚拟机和Python" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/05/17/VM的linux系统虚拟机和Python/">VM的linux系统虚拟机和Python</a>
+    </h1>
+  
+
+<p>
+
+  <a href="javascript:;" class="archive-article-date">
+      <i class="icon-smile icon"></i> |阅读人数：<span id="/2018/05/17/VM的linux系统虚拟机和Python/" class="pageViews">人</span>
+	  <span class="post-count">|总字数：399字</span>
+	  <span class="post-count">|阅读时长：1分</span>
+  </a>
+</p> 
+
+        
+        <a href="/2018/05/17/VM的linux系统虚拟机和Python/" class="archive-article-date">
+  	<time datetime="2018-05-17T09:33:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-17</time>
+</a>
+        
+      </header>
+    
+	
+	<!-- 目录内容 -->
+             
+        <!-- 目录内容结束 -->
+		
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="安装虚拟机"><a href="#安装虚拟机" class="headerlink" title="安装虚拟机"></a>安装虚拟机</h3><h4 id="安装思路"><a href="#安装思路" class="headerlink" title="安装思路"></a>安装思路</h4><p>这里用的虚拟机是VMware Workstation 12，激活软件是keygen.exe，然后在虚拟机中安装Linux系统，打开系统后安装Python.</p>
+<h4 id="网络冲突"><a href="#网络冲突" class="headerlink" title="网络冲突"></a>网络冲突</h4><p><img src="/2018/05/17/VM的linux系统虚拟机和Python/3.png" alt="网络冲突"><br>出现如上问题的主要原因是：虚拟机安装好后，多了好几个虚拟网卡，锐捷无法绑定到一个固定网卡，就会不停地掉线。<br>解决办法：<br>打开控制面板—网络和Internet—网络和共享中心—更改适配器设置（在右侧）<br>点开后将虚拟机的禁用（鼠标停在虚拟机网络上，右键鼠标，选择禁用即可）<br>这里有3中网络，VMnet1和VMnet8禁用即可，剩下的桥接的虚拟网卡可以保留。</p>
+<p>如果希望虚拟机也能上网的另一种方法：<br>首先需要下载UltraEdit，然后用UltraEdit打开锐捷安装目录下的8021x.exe，<br>然后寻找（ctrl+f）60EA00006A06 将其更改为 60EAFFFF6A06，<br>一共有3个60EA00006A06，要修改3次，最后保存即可。<br>再重新连接锐捷就没有问题了。</p>
+<h4 id="安装Linux"><a href="#安装Linux" class="headerlink" title="安装Linux"></a>安装Linux</h4><p>打开虚拟机，选择创建新的虚拟机，自定义。<br>我们用的系统是CentOS-6.5，必须要能兼容VM 10.0，如下：<br><img src="/2018/05/17/VM的linux系统虚拟机和Python/4.png" alt="虚拟机"></p>
+<p>选择要安装的系统：<br><img src="/2018/05/17/VM的linux系统虚拟机和Python/5.png" alt="虚拟机"></p>
+<p>选择Linux系统的ISO压缩包，下一步设置用户名和密码：<br><img src="/2018/05/17/VM的linux系统虚拟机和Python/6.png" alt="虚拟机"></p>
+<p>下一步，注意，最好重新创建一个文件夹！不然以后不方便删除！<br><img src="/2018/05/17/VM的linux系统虚拟机和Python/7.png" alt="虚拟机"><br>之后的全部下一步即可！</p>
+<h4 id="二进制转换与此平台上的长模式不兼容"><a href="#二进制转换与此平台上的长模式不兼容" class="headerlink" title="二进制转换与此平台上的长模式不兼容"></a>二进制转换与此平台上的长模式不兼容</h4><p><img src="/2018/05/17/VM的linux系统虚拟机和Python/9.png" alt="虚拟机"><br>重新开机，F2,bios打开intel Virtual Technology</p>
+
+      
+
+      
+	  				
+    </div>
+    <div class="article-info article-info-index">
+      
+        <div class="article-pop-out tagcloud">
+          <i class="icon-tuding"></i>
+          <a class="article-tag-list-link color3">置顶</a>
+        </div>
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">虚拟机</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Python//" class="article-tag-list-link color2">Python</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/05/17/VM的linux系统虚拟机和Python/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+ 
+
+  
     <article id="post-hexo常见命令" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1182,115 +1300,6 @@
  
 
   
-    <article id="post-eShipGlobal使用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/04/30/eShipGlobal使用/">eShipGlobal使用</a>
-    </h1>
-  
-
-<p>
-
-  <a href="javascript:;" class="archive-article-date">
-      <i class="icon-smile icon"></i> |阅读人数：<span id="/2018/04/30/eShipGlobal使用/" class="pageViews">人</span>
-	  <span class="post-count">|总字数：489字</span>
-	  <span class="post-count">|阅读时长：2分</span>
-  </a>
-</p> 
-
-        
-        <a href="/2018/04/30/eShipGlobal使用/" class="archive-article-date">
-  	<time datetime="2018-04-30T12:29:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-30</time>
-</a>
-        
-      </header>
-    
-	
-	<!-- 目录内容 -->
-             
-        <!-- 目录内容结束 -->
-		
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="eShipGlobal介绍"><a href="#eShipGlobal介绍" class="headerlink" title="eShipGlobal介绍"></a>eShipGlobal介绍</h3><p>eShipGlobal是一家第三方快递支付机构，可以申请本人邮寄材料或物品，让快递取件；也可以申请让对方将你需要的材料或者物品邮寄给你，由你付费，让快递到对方取件。个人使用，一般通过“Student/Scholar Login”注册（建议注册地址是自己接收快件的地址），注册后申请I-20邮寄快递单可参考以下步骤进行：</p>
-<h3 id="使用步骤"><a href="#使用步骤" class="headerlink" title="使用步骤"></a>使用步骤</h3><p>1.登陆student/scholar login，点击“Receive documents from your University（接收来自学校的文件）”左边的向下箭头<br>2.进入“University Selection”页面，点击地图上已接受offer的学校所在州简写，或者在下面“Select State”引擎中选择学校所在的州<br>3.在学校list中找到已接受offer的学校并选中<br>4.进入新的页面选择学校材料中要求的名称，本科可能是“Undergraduate Office of Admission”，研究生可能是“Graduate School”，或者是“Office of Admission”。有些学校当你选中一个名称时，下面会有提示信息，可以注意下。<br>5.进入新的页面，确认收件人信息无误后，“Type of Document（文件类型）”选择I-20（此页面有一个地方让填Student ID-学号，正式录取信基本都有，如果实在找不到，可以联系学校确认，如果还是没有的话，就填“NOSID”<br>6.进入新的页面选择邮寄方式，美国往中国邮寄多使用FedEx，不过其他也可以，看个人<br>7.进入新的页面确认收件人地址，无误后交费</p>
-<p>交费后，系统会给个人注册邮箱和对方学校注册邮箱各发一封确认邮件，学校完成I-20处理，会通过你选择的快递给你寄送I-20。</p>
-<h3 id="不满！"><a href="#不满！" class="headerlink" title="不满！"></a>不满！</h3><p>一般邮寄到中国用的都是FedEx，不得不说，价格真的太贵，USD 63.63 ！</p>
-
-      
-
-      
-	  				
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">UCSC</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">留学</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/UCSC//" class="article-tag-list-link color5">UCSC</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/04/30/eShipGlobal使用/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
- 
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -1313,7 +1322,7 @@
         本站总访问量：<span id="busuanzi_value_site_pv"></span>
         </span>
 		
-        <span class="post-count">| 总字数10.7k字</span>
+        <span class="post-count">| 总字数11.1k字</span>
 		   
 		<span id="timeDate">载入天数...</span>
 		<span id="times">载入时分秒...</span> 
@@ -1485,7 +1494,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">blog</a>
+                <a href="javascript:void(0)" class="js-tag color5">Blog</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1497,7 +1506,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Blog</a>
+                <a href="javascript:void(0)" class="js-tag color5">blog</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1509,6 +1518,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Python</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">虚拟机</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">网站</a>
               </li>
              
@@ -1517,7 +1534,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">yilia</a>
+                <a href="javascript:void(0)" class="js-tag color3">论文</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1533,7 +1550,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">论文</a>
+                <a href="javascript:void(0)" class="js-tag color1">yilia</a>
               </li>
             
             <div class="clearfix"></div>
