@@ -22,7 +22,13 @@
 <meta property="og:image" content="https://www.xingyehe.top/2018/05/17/VM的linux系统虚拟机和Python/6.png">
 <meta property="og:image" content="https://www.xingyehe.top/2018/05/17/VM的linux系统虚拟机和Python/7.png">
 <meta property="og:image" content="https://www.xingyehe.top/2018/05/17/VM的linux系统虚拟机和Python/9.png">
-<meta property="og:updated_time" content="2018-05-17T10:03:31.228Z">
+<meta property="og:image" content="https://www.xingyehe.top/2018/05/17/VM的linux系统虚拟机和Python/10.png">
+<meta property="og:image" content="https://www.xingyehe.top/2018/05/17/VM的linux系统虚拟机和Python/11.png">
+<meta property="og:image" content="https://www.xingyehe.top/2018/05/17/VM的linux系统虚拟机和Python/12.png">
+<meta property="og:image" content="https://www.xingyehe.top/2018/05/17/VM的linux系统虚拟机和Python/13.png">
+<meta property="og:image" content="https://www.xingyehe.top/2018/05/17/VM的linux系统虚拟机和Python/14.png">
+<meta property="og:image" content="https://www.xingyehe.top/2018/05/17/VM的linux系统虚拟机和Python/15.png">
+<meta property="og:updated_time" content="2018-05-17T12:32:47.711Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="VM的linux系统虚拟机和Python">
 <meta name="twitter:description" content="安装虚拟机安装思路这里用的虚拟机是VMware Workstation 12，激活软件是keygen.exe，然后在虚拟机中安装Linux系统，打开系统后安装Python. 网络冲突出现如上问题的主要原因是：虚拟机安装好后，多了好几个虚拟网卡，锐捷无法绑定到一个固定网卡，就会不停地掉线。解决办法：打开控制面板—网络和Internet—网络和共享中心—更改适配器设置（在右侧）点开后将虚拟机的禁用（鼠">
@@ -199,8 +205,8 @@
 
   <a href="javascript:;" class="archive-article-date">
       <i class="icon-smile icon"></i> |阅读人数：<span id="/2018/05/17/VM的linux系统虚拟机和Python/" class="pageViews">人</span>
-	  <span class="post-count">|总字数：399字</span>
-	  <span class="post-count">|阅读时长：1分</span>
+	  <span class="post-count">|总字数：616字</span>
+	  <span class="post-count">|阅读时长：2分</span>
   </a>
 </p> 
 
@@ -221,7 +227,7 @@
             <div id="toc-article" class="toc-article">
                 <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
                 <strong class="toc-title">文章目录</strong>
-                <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#安装虚拟机"><span class="toc-number">1.</span> <span class="toc-text">安装虚拟机</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#安装思路"><span class="toc-number">1.1.</span> <span class="toc-text">安装思路</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#网络冲突"><span class="toc-number">1.2.</span> <span class="toc-text">网络冲突</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#安装Linux"><span class="toc-number">1.3.</span> <span class="toc-text">安装Linux</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#二进制转换与此平台上的长模式不兼容"><span class="toc-number">1.4.</span> <span class="toc-text">二进制转换与此平台上的长模式不兼容</span></a></li></ol></li></ol>
+                <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#安装虚拟机"><span class="toc-number">1.</span> <span class="toc-text">安装虚拟机</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#安装思路"><span class="toc-number">1.1.</span> <span class="toc-text">安装思路</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#网络冲突"><span class="toc-number">1.2.</span> <span class="toc-text">网络冲突</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#安装Linux"><span class="toc-number">1.3.</span> <span class="toc-text">安装Linux</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#二进制转换与此平台上的长模式不兼容"><span class="toc-number">1.4.</span> <span class="toc-text">二进制转换与此平台上的长模式不兼容</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#安装Python"><span class="toc-number">1.5.</span> <span class="toc-text">安装Python</span></a></li></ol></li></ol>
            </div>
            <script type="text/javascript">
             function showToc(){
@@ -244,12 +250,15 @@
       
         <h3 id="安装虚拟机"><a href="#安装虚拟机" class="headerlink" title="安装虚拟机"></a>安装虚拟机</h3><h4 id="安装思路"><a href="#安装思路" class="headerlink" title="安装思路"></a>安装思路</h4><p>这里用的虚拟机是VMware Workstation 12，激活软件是keygen.exe，然后在虚拟机中安装Linux系统，打开系统后安装Python.</p>
 <h4 id="网络冲突"><a href="#网络冲突" class="headerlink" title="网络冲突"></a>网络冲突</h4><p><img src="/2018/05/17/VM的linux系统虚拟机和Python/3.png" alt="网络冲突"><br>出现如上问题的主要原因是：虚拟机安装好后，多了好几个虚拟网卡，锐捷无法绑定到一个固定网卡，就会不停地掉线。<br>解决办法：<br>打开控制面板—网络和Internet—网络和共享中心—更改适配器设置（在右侧）<br>点开后将虚拟机的禁用（鼠标停在虚拟机网络上，右键鼠标，选择禁用即可）<br>这里有3中网络，VMnet1和VMnet8禁用即可，剩下的桥接的虚拟网卡可以保留。</p>
+<a id="more"></a>
 <p>如果希望虚拟机也能上网的另一种方法：<br>首先需要下载UltraEdit，然后用UltraEdit打开锐捷安装目录下的8021x.exe，<br>然后寻找（ctrl+f）60EA00006A06 将其更改为 60EAFFFF6A06，<br>一共有3个60EA00006A06，要修改3次，最后保存即可。<br>再重新连接锐捷就没有问题了。</p>
 <h4 id="安装Linux"><a href="#安装Linux" class="headerlink" title="安装Linux"></a>安装Linux</h4><p>打开虚拟机，选择创建新的虚拟机，自定义。<br>我们用的系统是CentOS-6.5，必须要能兼容VM 10.0，如下：<br><img src="/2018/05/17/VM的linux系统虚拟机和Python/4.png" alt="虚拟机"></p>
 <p>选择要安装的系统：<br><img src="/2018/05/17/VM的linux系统虚拟机和Python/5.png" alt="虚拟机"></p>
 <p>选择Linux系统的ISO压缩包，下一步设置用户名和密码：<br><img src="/2018/05/17/VM的linux系统虚拟机和Python/6.png" alt="虚拟机"></p>
 <p>下一步，注意，最好重新创建一个文件夹！不然以后不方便删除！<br><img src="/2018/05/17/VM的linux系统虚拟机和Python/7.png" alt="虚拟机"><br>之后的全部下一步即可！</p>
 <h4 id="二进制转换与此平台上的长模式不兼容"><a href="#二进制转换与此平台上的长模式不兼容" class="headerlink" title="二进制转换与此平台上的长模式不兼容"></a>二进制转换与此平台上的长模式不兼容</h4><p><img src="/2018/05/17/VM的linux系统虚拟机和Python/9.png" alt="虚拟机"><br>重新开机，F2,bios打开intel Virtual Technology</p>
+<h4 id="安装Python"><a href="#安装Python" class="headerlink" title="安装Python"></a>安装Python</h4><p>首先和windown不同的是，在Linux中安装Python需要下面两个文件<br>‘Anaconda3-5.0.1-Linux-x86_64.sh’ 和 ‘pycharm-professional-2017.3.2.tar.gz’<br>把他们拖动到虚拟机中，自动复制。<br>首先安装Anaconda</p>
+<p>这个比较简单<br>然后安装pycharm就比较复杂了<br>首先要进入根目录创建一个文件夹来接受解压缩文件<br>解压缩包，进入bin文件夹，选择pycharm.sh，打开<br>安装完后要激活，打开网站<a href="http://idea.lanyus.com/，复制激活码" target="_blank" rel="noopener">http://idea.lanyus.com/，复制激活码</a><br><img src="/2018/05/17/VM的linux系统虚拟机和Python/10.png" alt="pycharm"><br>开始第一次调试<br>首先，创建一个新的文档：<br><img src="/2018/05/17/VM的linux系统虚拟机和Python/11.png" alt="pycharm"><br>如果没有python3按照下面操作<br><img src="/2018/05/17/VM的linux系统虚拟机和Python/12.png" alt="pycharm"><br><img src="/2018/05/17/VM的linux系统虚拟机和Python/13.png" alt="pycharm"><br>进入了，有些慢，需要等待右下角下面的进度条读完，但这个过程可以码代码<br>选择第一个文件夹，右键-new-python<br><img src="/2018/05/17/VM的linux系统虚拟机和Python/14.png" alt="pycharm"><br>输入测试代码<br>运行结果：<br><img src="/2018/05/17/VM的linux系统虚拟机和Python/15.png" alt="pycharm"><br>成功！</p>
 
       
 
@@ -424,7 +433,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#安装虚拟机"><span class="toc-number">1.</span> <span class="toc-text">安装虚拟机</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#安装思路"><span class="toc-number">1.1.</span> <span class="toc-text">安装思路</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#网络冲突"><span class="toc-number">1.2.</span> <span class="toc-text">网络冲突</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#安装Linux"><span class="toc-number">1.3.</span> <span class="toc-text">安装Linux</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#二进制转换与此平台上的长模式不兼容"><span class="toc-number">1.4.</span> <span class="toc-text">二进制转换与此平台上的长模式不兼容</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#安装虚拟机"><span class="toc-number">1.</span> <span class="toc-text">安装虚拟机</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#安装思路"><span class="toc-number">1.1.</span> <span class="toc-text">安装思路</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#网络冲突"><span class="toc-number">1.2.</span> <span class="toc-text">网络冲突</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#安装Linux"><span class="toc-number">1.3.</span> <span class="toc-text">安装Linux</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#二进制转换与此平台上的长模式不兼容"><span class="toc-number">1.4.</span> <span class="toc-text">二进制转换与此平台上的长模式不兼容</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#安装Python"><span class="toc-number">1.5.</span> <span class="toc-text">安装Python</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -479,7 +488,7 @@ gitment.render('gitment-ctn')
         本站总访问量：<span id="busuanzi_value_site_pv"></span>
         </span>
 		
-        <span class="post-count">| 总字数11.1k字</span>
+        <span class="post-count">| 总字数11.3k字</span>
 		   
 		<span id="timeDate">载入天数...</span>
 		<span id="times">载入时分秒...</span> 
@@ -639,6 +648,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">blog</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Blog</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">UCSC</a>
               </li>
              
@@ -647,31 +668,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Blog</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">游戏</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">LOL</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">blog</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">日语</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">N3</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -703,11 +704,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">yilia</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">yilia</a>
+                <a href="javascript:void(0)" class="js-tag color3">日语</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">N3</a>
               </li>
             
             <div class="clearfix"></div>
