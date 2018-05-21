@@ -174,6 +174,114 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-letex中文显示办法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/05/21/letex中文显示办法/">letex中文显示办法</a>
+    </h1>
+  
+
+<p>
+
+  <a href="javascript:;" class="archive-article-date">
+      <i class="icon-smile icon"></i> |阅读人数：<span id="/2018/05/21/letex中文显示办法/" class="pageViews">人</span>
+	  <span class="post-count">|总字数：334字</span>
+	  <span class="post-count">|阅读时长：2分</span>
+  </a>
+</p> 
+
+        
+        <a href="/2018/05/21/letex中文显示办法/" class="archive-article-date">
+  	<time datetime="2018-05-21T12:03:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-21</time>
+</a>
+        
+      </header>
+    
+	
+	<!-- 目录内容 -->
+             
+        <!-- 目录内容结束 -->
+		
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>letex中如果直接输入中文是不会显示的，但也不报错。<br>要显示中文，主要代码如下：<br>在文档开始处的代码‘\begin{document}’后面添加一行新的代码‘\begin{CJK}{UTF8}{gbsn}’<br>即：<br><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">\documentclass[letterpaper,11pt]&#123;article&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="string">\usepackage&#123;CJK&#125;</span></span><br><span class="line"><span class="string">\usepackage&#123;latexsym&#125;</span></span><br><span class="line"><span class="string">\usepackage[empty]&#123;fullpage&#125;</span></span><br><span class="line"><span class="string">\usepackage&#123;titlesec&#125;</span></span><br><span class="line"><span class="string">\usepackage&#123;marvosym&#125;</span></span><br><span class="line"><span class="string">\usepackage[usenames,dvipsnames]&#123;color&#125;</span></span><br><span class="line"><span class="string">\usepackage&#123;verbatim&#125;</span></span><br><span class="line"><span class="string">\usepackage&#123;enumitem&#125;</span></span><br><span class="line"><span class="string">\usepackage[pdftex]&#123;hyperref&#125;</span></span><br><span class="line"><span class="string">\usepackage&#123;fancyhdr&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="string">\pagestyle&#123;fancy&#125;</span></span><br><span class="line"><span class="string">\fancyhf&#123;&#125;</span> <span class="string">%</span> <span class="string">clear</span> <span class="string">all</span> <span class="string">header</span> <span class="string">and</span> <span class="string">footer</span> <span class="string">fields</span></span><br><span class="line"><span class="string">\fancyfoot&#123;&#125;</span></span><br><span class="line"><span class="string">\renewcommand&#123;\headrulewidth&#125;&#123;0pt&#125;</span></span><br><span class="line"><span class="string">\renewcommand&#123;\footrulewidth&#125;&#123;0pt&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="string">%</span> <span class="string">Adjust</span> <span class="string">margins</span></span><br><span class="line"><span class="string">\addtolength&#123;\oddsidemargin&#125;&#123;-0.375in&#125;</span></span><br><span class="line"><span class="string">\addtolength&#123;\evensidemargin&#125;&#123;-0.375in&#125;</span></span><br><span class="line"><span class="string">\addtolength&#123;\textwidth&#125;&#123;1in&#125;</span></span><br><span class="line"><span class="string">\addtolength&#123;\topmargin&#125;&#123;-.5in&#125;</span></span><br><span class="line"><span class="string">\addtolength&#123;\textheight&#125;&#123;1.0in&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="string">\urlstyle&#123;same&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="string">\raggedbottom</span></span><br><span class="line"><span class="string">\raggedright</span></span><br><span class="line"><span class="string">\setlength&#123;\tabcolsep&#125;&#123;0in&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="string">%</span> <span class="string">Sections</span> <span class="string">formatting</span></span><br><span class="line"><span class="string">\titleformat&#123;\section&#125;&#123;</span></span><br><span class="line">  <span class="string">\vspace&#123;-4pt&#125;\scshape\raggedright\large</span></span><br><span class="line"><span class="string">&#125;&#123;&#125;&#123;0em&#125;&#123;&#125;[\color&#123;black&#125;\titlerule</span> <span class="string">\vspace&#123;-5pt&#125;]</span></span><br><span class="line"></span><br><span class="line"><span class="string">%-------------------------</span></span><br><span class="line"><span class="string">%</span> <span class="string">Custom</span> <span class="string">commands</span></span><br><span class="line"><span class="string">\newcommand&#123;\resumeItem&#125;[2]&#123;</span>       </span><br><span class="line">  <span class="string">\item\small&#123;</span></span><br><span class="line">    <span class="string">\textbf&#123;#1&#125;&#123;</span> <span class="comment">#2 \vspace&#123;-2pt&#125;&#125;   %冒号去掉</span></span><br><span class="line">  <span class="string">&#125;</span></span><br><span class="line"><span class="string">&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="string">\newcommand&#123;\resumeSubheading&#125;[4]&#123;</span></span><br><span class="line">  <span class="string">\vspace&#123;-1pt&#125;\item</span></span><br><span class="line">    <span class="string">\begin&#123;tabular*&#125;&#123;0.97\textwidth&#125;&#123;l@&#123;\extracolsep&#123;\fill&#125;&#125;r&#125;</span></span><br><span class="line">      <span class="string">\textbf&#123;#1&#125;</span> <span class="string">&amp;</span> <span class="comment">#2 \\</span></span><br><span class="line">      <span class="string">\textit&#123;\small#3&#125;</span> <span class="string">&amp;</span> <span class="string">\textit&#123;\small</span> <span class="comment">#4&#125; \\</span></span><br><span class="line">    <span class="string">\end&#123;tabular*&#125;\vspace&#123;-5pt&#125;</span></span><br><span class="line"><span class="string">&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="string">\newcommand&#123;\resumeSubItem&#125;[2]&#123;\resumeItem&#123;#1&#125;&#123;#2&#125;\vspace&#123;-4pt&#125;&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="string">\renewcommand&#123;\labelitemii&#125;&#123;$\circ$&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="string">\newcommand&#123;\resumeSubHeadingListStart&#125;&#123;\begin&#123;itemize&#125;[leftmargin=*]&#125;</span></span><br><span class="line"><span class="string">\newcommand&#123;\resumeSubHeadingListEnd&#125;&#123;\end&#123;itemize&#125;&#125;</span></span><br><span class="line"><span class="string">\newcommand&#123;\resumeItemListStart&#125;&#123;\begin&#123;itemize&#125;&#125;</span></span><br><span class="line"><span class="string">\newcommand&#123;\resumeItemListEnd&#125;&#123;\end&#123;itemize&#125;\vspace&#123;-5pt&#125;&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="string">%-------------------------------------------</span></span><br><span class="line"><span class="string">%%%%%%</span>  <span class="string">CV</span> <span class="string">STARTS</span> <span class="string">HERE</span>  <span class="string">%%%%%%%%%%%%%%%%%%%%%%%%%%%%</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="string">\begin&#123;document&#125;</span></span><br><span class="line"><span class="string">\begin&#123;CJK&#125;&#123;UTF8&#125;&#123;gbsn&#125;</span></span><br><span class="line"><span class="string">%----------HEADING-----------------</span></span><br><span class="line"><span class="string">\begin&#123;center&#125;</span> </span><br><span class="line"><span class="string">\textbf</span> <span class="string">&#123;\Large</span> <span class="string">HE</span> <span class="string">Xingye（贺星晔）&#125;\\</span></span><br><span class="line"><span class="string">\end&#123;center&#125;</span></span><br></pre></td></tr></table></figure></p>
+<p>最后别忘了，在文章最后面要加上’\end{CJK}’<br>即：<br><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">\end&#123;CJK&#125;</span> </span><br><span class="line"><span class="string">\end&#123;document&#125;</span></span><br></pre></td></tr></table></figure></p>
+
+      
+
+      
+	  				
+    </div>
+    <div class="article-info article-info-index">
+      
+        <div class="article-pop-out tagcloud">
+          <i class="icon-tuding"></i>
+          <a class="article-tag-list-link color3">置顶</a>
+        </div>
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">LaTex</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/LaTex//" class="article-tag-list-link color1">LaTex</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/05/21/letex中文显示办法/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+ 
+
+  
     <article id="post-VM的linux系统虚拟机和Python" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -189,7 +297,7 @@
 
   <a href="javascript:;" class="archive-article-date">
       <i class="icon-smile icon"></i> |阅读人数：<span id="/2018/05/17/VM的linux系统虚拟机和Python/" class="pageViews">人</span>
-	  <span class="post-count">|总字数：616字</span>
+	  <span class="post-count">|总字数：639字</span>
 	  <span class="post-count">|阅读时长：2分</span>
   </a>
 </p> 
@@ -416,7 +524,7 @@
 
   <a href="javascript:;" class="archive-article-date">
       <i class="icon-smile icon"></i> |阅读人数：<span id="/2018/04/27/一些常用的网站/" class="pageViews">人</span>
-	  <span class="post-count">|总字数：72字</span>
+	  <span class="post-count">|总字数：77字</span>
 	  <span class="post-count">|阅读时长：1分</span>
   </a>
 </p> 
@@ -435,7 +543,7 @@
 		
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="一些常用的网站"><a href="#一些常用的网站" class="headerlink" title="一些常用的网站"></a>一些常用的网站</h3><p><a href="http://www.runoob.com/tags/tag-div.html" target="_blank" rel="noopener">菜鸟教程</a> ：有关各种Html语法，可在线预览效果！<br><a href="https://acm.ecnu.edu.cn/problem/" target="_blank" rel="noopener">EOJ</a> ：适合本科生使用，找工作还是leetcode！<br><a href="https://toefl.kmf.com/home" target="_blank" rel="noopener">考满分</a> ：学习托福和GRE的好网站，当年备考时用到的！<br><a href="http://lang-8.com/" target="_blank" rel="noopener">Multi-lingual language learning and language exchange</a> ：多语种学习！</p>
+        <h3 id="一些常用的网站"><a href="#一些常用的网站" class="headerlink" title="一些常用的网站"></a>一些常用的网站</h3><p><a href="http://www.runoob.com/tags/tag-div.html" target="_blank" rel="noopener">菜鸟教程</a> ：有关各种Html语法，可在线预览效果！<br><a href="https://acm.ecnu.edu.cn/problem/" target="_blank" rel="noopener">EOJ</a> ：适合本科生使用，找工作还是leetcode！<br><a href="https://toefl.kmf.com/home" target="_blank" rel="noopener">考满分</a> ：学习托福和GRE的好网站，当年备考时用到的！<br><a href="http://lang-8.com/" target="_blank" rel="noopener">Multi-lingual language learning and language exchange</a> ：多语种学习！<br><a href="https://www.sharelatex.com/project" target="_blank" rel="noopener">sharelatex</a> ：Letex编辑器！</p>
 
       
 
@@ -1189,116 +1297,9 @@
  
 
   
-    <article id="post-签证的区别" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/04/30/签证的区别/">签证的区别</a>
-    </h1>
-  
-
-<p>
-
-  <a href="javascript:;" class="archive-article-date">
-      <i class="icon-smile icon"></i> |阅读人数：<span id="/2018/04/30/签证的区别/" class="pageViews">人</span>
-	  <span class="post-count">|总字数：840字</span>
-	  <span class="post-count">|阅读时长：3分</span>
-  </a>
-</p> 
-
-        
-        <a href="/2018/04/30/签证的区别/" class="archive-article-date">
-  	<time datetime="2018-04-30T12:51:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-30</time>
-</a>
-        
-      </header>
-    
-	
-	<!-- 目录内容 -->
-             
-        <!-- 目录内容结束 -->
-		
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="F-1签证"><a href="#F-1签证" class="headerlink" title="F-1签证"></a>F-1签证</h3><h4 id="获取条件"><a href="#获取条件" class="headerlink" title="获取条件"></a>获取条件</h4><p>美国留学签证的第一种类型是—F-1签证，国外学生获得F-1签证的条件：</p>
-<p>1.证明自己有支付在美学习和生活的费用的能力；</p>
-<p>2.学生获得进入经过美国官方认证的教育机构、语言培训中心、小学，初高中、社区学院、高等学府的学习资格，为了获取学位、证书和学历的全日制学生;</p>
-<p>3.具备全英文交流能力和听课能力，进入语言培训中心的学生除外;</p>
-        
-          <a class="article-more-a" href="/2018/04/30/签证的区别/#more">more >></a>
-        
-      
-
-      
-	  				
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">留学</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/留学//" class="article-tag-list-link color3">留学</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/04/30/签证的区别/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
- 
-
-  
   
     <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
     </nav>
   
 
@@ -1318,7 +1319,7 @@
         本站总访问量：<span id="busuanzi_value_site_pv"></span>
         </span>
 		
-        <span class="post-count">| 总字数11.3k字</span>
+        <span class="post-count">| 总字数11.7k字</span>
 		   
 		<span id="timeDate">载入天数...</span>
 		<span id="times">载入时分秒...</span> 
@@ -1478,23 +1479,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">blog</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Blog</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">UCSC</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">留学</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Blog</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1506,11 +1503,31 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">blog</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">日语</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">N3</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">yilia</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Python</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">虚拟机</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">LaTex</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1522,10 +1539,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">论文</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">档案</a>
               </li>
              
@@ -1534,19 +1547,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">yilia</a>
+                <a href="javascript:void(0)" class="js-tag color3">论文</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随笔</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">日语</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">N3</a>
               </li>
             
             <div class="clearfix"></div>
