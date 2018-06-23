@@ -174,6 +174,341 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-letex中文显示办法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/05/21/letex中文显示办法/">letex中文显示办法</a>
+    </h1>
+  
+
+<p>
+
+  <a href="javascript:;" class="archive-article-date">
+      <i class="icon-smile icon"></i> |阅读人数：<span id="/2018/05/21/letex中文显示办法/" class="pageViews">人</span>
+	  <span class="post-count">|总字数：331字</span>
+	  <span class="post-count">|阅读时长：2分</span>
+  </a>
+</p> 
+
+        
+        <a href="/2018/05/21/letex中文显示办法/" class="archive-article-date">
+  	<time datetime="2018-05-21T12:03:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-21</time>
+</a>
+        
+      </header>
+    
+	
+	<!-- 目录内容 -->
+             
+        <!-- 目录内容结束 -->
+		
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>letex中如果直接输入中文是不会显示的，但也不报错。<br>要显示中文，主要代码如下：<br>在文档开始处的代码‘\begin{document}’后面添加一行新的代码‘\begin{CJK}{UTF8}{gbsn}’<br>即：<br><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">\documentclass[letterpaper,11pt]&#123;article&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="string">\usepackage&#123;CJK&#125;</span></span><br><span class="line"><span class="string">\usepackage&#123;latexsym&#125;</span></span><br><span class="line"><span class="string">\usepackage[empty]&#123;fullpage&#125;</span></span><br><span class="line"><span class="string">\usepackage&#123;titlesec&#125;</span></span><br><span class="line"><span class="string">\usepackage&#123;marvosym&#125;</span></span><br><span class="line"><span class="string">\usepackage[usenames,dvipsnames]&#123;color&#125;</span></span><br><span class="line"><span class="string">\usepackage&#123;verbatim&#125;</span></span><br><span class="line"><span class="string">\usepackage&#123;enumitem&#125;</span></span><br><span class="line"><span class="string">\usepackage[pdftex]&#123;hyperref&#125;</span></span><br><span class="line"><span class="string">\usepackage&#123;fancyhdr&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="string">\pagestyle&#123;fancy&#125;</span></span><br><span class="line"><span class="string">\fancyhf&#123;&#125;</span> <span class="string">%</span> <span class="string">clear</span> <span class="string">all</span> <span class="string">header</span> <span class="string">and</span> <span class="string">footer</span> <span class="string">fields</span></span><br><span class="line"><span class="string">\fancyfoot&#123;&#125;</span></span><br><span class="line"><span class="string">\renewcommand&#123;\headrulewidth&#125;&#123;0pt&#125;</span></span><br><span class="line"><span class="string">\renewcommand&#123;\footrulewidth&#125;&#123;0pt&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="string">%</span> <span class="string">Adjust</span> <span class="string">margins</span></span><br><span class="line"><span class="string">\addtolength&#123;\oddsidemargin&#125;&#123;-0.375in&#125;</span></span><br><span class="line"><span class="string">\addtolength&#123;\evensidemargin&#125;&#123;-0.375in&#125;</span></span><br><span class="line"><span class="string">\addtolength&#123;\textwidth&#125;&#123;1in&#125;</span></span><br><span class="line"><span class="string">\addtolength&#123;\topmargin&#125;&#123;-.5in&#125;</span></span><br><span class="line"><span class="string">\addtolength&#123;\textheight&#125;&#123;1.0in&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="string">\urlstyle&#123;same&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="string">\raggedbottom</span></span><br><span class="line"><span class="string">\raggedright</span></span><br><span class="line"><span class="string">\setlength&#123;\tabcolsep&#125;&#123;0in&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="string">%</span> <span class="string">Sections</span> <span class="string">formatting</span></span><br><span class="line"><span class="string">\titleformat&#123;\section&#125;&#123;</span></span><br><span class="line">  <span class="string">\vspace&#123;-4pt&#125;\scshape\raggedright\large</span></span><br><span class="line"><span class="string">&#125;&#123;&#125;&#123;0em&#125;&#123;&#125;[\color&#123;black&#125;\titlerule</span> <span class="string">\vspace&#123;-5pt&#125;]</span></span><br><span class="line"></span><br><span class="line"><span class="string">%-------------------------</span></span><br><span class="line"><span class="string">%</span> <span class="string">Custom</span> <span class="string">commands</span></span><br><span class="line"><span class="string">\newcommand&#123;\resumeItem&#125;[2]&#123;</span>       </span><br><span class="line">  <span class="string">\item\small&#123;</span></span><br><span class="line">    <span class="string">\textbf&#123;#1&#125;&#123;</span> <span class="comment">#2 \vspace&#123;-2pt&#125;&#125;   %冒号去掉</span></span><br><span class="line">  <span class="string">&#125;</span></span><br><span class="line"><span class="string">&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="string">\newcommand&#123;\resumeSubheading&#125;[4]&#123;</span></span><br><span class="line">  <span class="string">\vspace&#123;-1pt&#125;\item</span></span><br><span class="line">    <span class="string">\begin&#123;tabular*&#125;&#123;0.97\textwidth&#125;&#123;l@&#123;\extracolsep&#123;\fill&#125;&#125;r&#125;</span></span><br><span class="line">      <span class="string">\textbf&#123;#1&#125;</span> <span class="string">&amp;</span> <span class="comment">#2 \\</span></span><br><span class="line">      <span class="string">\textit&#123;\small#3&#125;</span> <span class="string">&amp;</span> <span class="string">\textit&#123;\small</span> <span class="comment">#4&#125; \\</span></span><br><span class="line">    <span class="string">\end&#123;tabular*&#125;\vspace&#123;-5pt&#125;</span></span><br><span class="line"><span class="string">&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="string">\newcommand&#123;\resumeSubItem&#125;[2]&#123;\resumeItem&#123;#1&#125;&#123;#2&#125;\vspace&#123;-4pt&#125;&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="string">\renewcommand&#123;\labelitemii&#125;&#123;$\circ$&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="string">\newcommand&#123;\resumeSubHeadingListStart&#125;&#123;\begin&#123;itemize&#125;[leftmargin=*]&#125;</span></span><br><span class="line"><span class="string">\newcommand&#123;\resumeSubHeadingListEnd&#125;&#123;\end&#123;itemize&#125;&#125;</span></span><br><span class="line"><span class="string">\newcommand&#123;\resumeItemListStart&#125;&#123;\begin&#123;itemize&#125;&#125;</span></span><br><span class="line"><span class="string">\newcommand&#123;\resumeItemListEnd&#125;&#123;\end&#123;itemize&#125;\vspace&#123;-5pt&#125;&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="string">%-------------------------------------------</span></span><br><span class="line"><span class="string">%%%%%%</span>  <span class="string">CV</span> <span class="string">STARTS</span> <span class="string">HERE</span>  <span class="string">%%%%%%%%%%%%%%%%%%%%%%%%%%%%</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="string">\begin&#123;document&#125;</span></span><br><span class="line"><span class="string">\begin&#123;CJK&#125;&#123;UTF8&#125;&#123;gbsn&#125;</span></span><br><span class="line"><span class="string">%----------HEADING-----------------</span></span><br><span class="line"><span class="string">\begin&#123;center&#125;</span> </span><br><span class="line"><span class="string">\textbf</span> <span class="string">&#123;\Large</span> <span class="string">H（XXX）&#125;\\</span></span><br><span class="line"><span class="string">\end&#123;center&#125;</span></span><br></pre></td></tr></table></figure></p>
+<p>最后别忘了，在文章最后面要加上’\end{CJK}’<br>即：<br><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">\end&#123;CJK&#125;</span> </span><br><span class="line"><span class="string">\end&#123;document&#125;</span></span><br></pre></td></tr></table></figure></p>
+
+      
+
+      
+	  				
+    </div>
+    <div class="article-info article-info-index">
+      
+        <div class="article-pop-out tagcloud">
+          <i class="icon-tuding"></i>
+          <a class="article-tag-list-link color3">置顶</a>
+        </div>
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">LaTex</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/LaTex//" class="article-tag-list-link color1">LaTex</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/05/21/letex中文显示办法/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+ 
+
+  
+    <article id="post-VM的linux系统虚拟机和Python" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/05/17/VM的linux系统虚拟机和Python/">VM的linux系统虚拟机和Python</a>
+    </h1>
+  
+
+<p>
+
+  <a href="javascript:;" class="archive-article-date">
+      <i class="icon-smile icon"></i> |阅读人数：<span id="/2018/05/17/VM的linux系统虚拟机和Python/" class="pageViews">人</span>
+	  <span class="post-count">|总字数：639字</span>
+	  <span class="post-count">|阅读时长：2分</span>
+  </a>
+</p> 
+
+        
+        <a href="/2018/05/17/VM的linux系统虚拟机和Python/" class="archive-article-date">
+  	<time datetime="2018-05-17T09:33:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-17</time>
+</a>
+        
+      </header>
+    
+	
+	<!-- 目录内容 -->
+             
+        <!-- 目录内容结束 -->
+		
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="安装虚拟机"><a href="#安装虚拟机" class="headerlink" title="安装虚拟机"></a>安装虚拟机</h3><h4 id="安装思路"><a href="#安装思路" class="headerlink" title="安装思路"></a>安装思路</h4><p>这里用的虚拟机是VMware Workstation 12，激活软件是keygen.exe，然后在虚拟机中安装Linux系统，打开系统后安装Python.</p>
+<h4 id="网络冲突"><a href="#网络冲突" class="headerlink" title="网络冲突"></a>网络冲突</h4><p><img src="/2018/05/17/VM的linux系统虚拟机和Python/3.png" alt="网络冲突"><br>出现如上问题的主要原因是：虚拟机安装好后，多了好几个虚拟网卡，锐捷无法绑定到一个固定网卡，就会不停地掉线。<br>解决办法：<br>打开控制面板—网络和Internet—网络和共享中心—更改适配器设置（在右侧）<br>点开后将虚拟机的禁用（鼠标停在虚拟机网络上，右键鼠标，选择禁用即可）<br>这里有3中网络，VMnet1和VMnet8禁用即可，剩下的桥接的虚拟网卡可以保留。</p>
+        
+          <a class="article-more-a" href="/2018/05/17/VM的linux系统虚拟机和Python/#more">more >></a>
+        
+      
+
+      
+	  				
+    </div>
+    <div class="article-info article-info-index">
+      
+        <div class="article-pop-out tagcloud">
+          <i class="icon-tuding"></i>
+          <a class="article-tag-list-link color3">置顶</a>
+        </div>
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">虚拟机</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Python//" class="article-tag-list-link color2">Python</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/05/17/VM的linux系统虚拟机和Python/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+ 
+
+  
+    <article id="post-hexo常见命令" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/04/28/hexo常见命令/">hexo常见命令</a>
+    </h1>
+  
+
+<p>
+
+  <a href="javascript:;" class="archive-article-date">
+      <i class="icon-smile icon"></i> |阅读人数：<span id="/2018/04/28/hexo常见命令/" class="pageViews">人</span>
+	  <span class="post-count">|总字数：119字</span>
+	  <span class="post-count">|阅读时长：1分</span>
+  </a>
+</p> 
+
+        
+        <a href="/2018/04/28/hexo常见命令/" class="archive-article-date">
+  	<time datetime="2018-04-28T09:08:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-28</time>
+</a>
+        
+      </header>
+    
+	
+	<!-- 目录内容 -->
+             
+        <!-- 目录内容结束 -->
+		
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1-常用命令"><a href="#1-常用命令" class="headerlink" title="1.常用命令"></a>1.常用命令</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">hexo n &quot;我的博客&quot; == hexo new &quot;我的博客&quot;  #新建文章</span><br><span class="line">hexo p == hexo publish</span><br><span class="line">hexo clean  #清除缓存 网页正常情况下可以忽略此条命令</span><br><span class="line">hexo g == hexo generate #生成静态网页</span><br><span class="line">hexo s == hexo server  #启动服务预览</span><br><span class="line">hexo d == hexo deploy  #部署</span><br></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2018/04/28/hexo常见命令/#more">more >></a>
+        
+      
+
+      
+	  				
+    </div>
+    <div class="article-info article-info-index">
+      
+        <div class="article-pop-out tagcloud">
+          <i class="icon-tuding"></i>
+          <a class="article-tag-list-link color3">置顶</a>
+        </div>
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Hexo</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Blog</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Hexo//" class="article-tag-list-link color5">Hexo</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/04/28/hexo常见命令/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+ 
+
+  
     <article id="post-一些常用的网站" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -254,6 +589,443 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2018/04/27/一些常用的网站/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+ 
+
+  
+    <article id="post-Hexo使用教程" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/04/25/Hexo使用教程/">Hexo使用教程</a>
+    </h1>
+  
+
+<p>
+
+  <a href="javascript:;" class="archive-article-date">
+      <i class="icon-smile icon"></i> |阅读人数：<span id="/2018/04/25/Hexo使用教程/" class="pageViews">人</span>
+	  <span class="post-count">|总字数：118字</span>
+	  <span class="post-count">|阅读时长：1分</span>
+  </a>
+</p> 
+
+        
+        <a href="/2018/04/25/Hexo使用教程/" class="archive-article-date">
+  	<time datetime="2018-04-25T04:06:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-25</time>
+</a>
+        
+      </header>
+    
+	
+	<!-- 目录内容 -->
+             
+        <!-- 目录内容结束 -->
+		
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="添加置顶功能"><a href="#添加置顶功能" class="headerlink" title="添加置顶功能"></a>添加置顶功能</h3><p>先在blog根目录下输入下面两行代码：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm uninstall hexo-generator-index --save</span><br><span class="line">npm install hexo-generator-index-pin-top --save</span><br></pre></td></tr></table></figure></p>
+        
+          <a class="article-more-a" href="/2018/04/25/Hexo使用教程/#more">more >></a>
+        
+      
+
+      
+	  				
+    </div>
+    <div class="article-info article-info-index">
+      
+        <div class="article-pop-out tagcloud">
+          <i class="icon-tuding"></i>
+          <a class="article-tag-list-link color3">置顶</a>
+        </div>
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Hexo</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Blog</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Blog//" class="article-tag-list-link color5">Blog</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/04/25/Hexo使用教程/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+ 
+
+  
+    <article id="post-出国前体检" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/06/23/出国前体检/">出国前体检</a>
+    </h1>
+  
+
+<p>
+
+  <a href="javascript:;" class="archive-article-date">
+      <i class="icon-smile icon"></i> |阅读人数：<span id="/2018/06/23/出国前体检/" class="pageViews">人</span>
+	  <span class="post-count">|总字数：234字</span>
+	  <span class="post-count">|阅读时长：1分</span>
+  </a>
+</p> 
+
+        
+        <a href="/2018/06/23/出国前体检/" class="archive-article-date">
+  	<time datetime="2018-06-23T12:22:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-23</time>
+</a>
+        
+      </header>
+    
+	
+	<!-- 目录内容 -->
+             
+        <!-- 目录内容结束 -->
+		
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="地址"><a href="#地址" class="headerlink" title="地址"></a>地址</h3><p>首先，要去每个省的国际旅行卫生保健中心办理小黄本和小红本，只有这一个机构！其他医院不行！<br><img src="/2018/06/23/出国前体检/1.png" alt="体检"></p>
+<h3 id="要带材料"><a href="#要带材料" class="headerlink" title="要带材料"></a>要带材料</h3><h4 id="自费"><a href="#自费" class="headerlink" title="自费"></a>自费</h4><p>身份证<br>小时候疫苗记录<br>学校的体检要求<br>学校让上传的疫苗英文记录(由工作人员填写)</p>
+<h4 id="免费"><a href="#免费" class="headerlink" title="免费"></a>免费</h4><p>带I-20<br>签证记录</p>
+<h3 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h3><p>一早出发，个别地方得提前预约！<br>别吃任何东西，装一瓶水，装点吃的（或者体检完找家饭店）<br>到卫生保健中心后，领号排队，填表，此时可以开始喝水。<br>轮到你后，可以开始办理相应的手续，疫苗转录。<br>然后开始体检，抽血，这些要抓紧，11点就下班了。<br>都体检完后，打需要不搭的疫苗。<br>选择取小红本和小黄本的方式，我是邮寄，22元 送到家。<br>最后，来几张现场图<br><img src="/2018/06/23/出国前体检/2.png" alt="体检"><br><img src="/2018/06/23/出国前体检/3.png" alt="体检"></p>
+
+      
+
+      
+	  				
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">留学</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">事务办理</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/留学//" class="article-tag-list-link color3">留学</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/06/23/出国前体检/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+ 
+
+  
+    <article id="post-毕业后档案处理总结" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/06/23/毕业后档案处理总结/">毕业后档案处理总结</a>
+    </h1>
+  
+
+<p>
+
+  <a href="javascript:;" class="archive-article-date">
+      <i class="icon-smile icon"></i> |阅读人数：<span id="/2018/06/23/毕业后档案处理总结/" class="pageViews">人</span>
+	  <span class="post-count">|总字数：411字</span>
+	  <span class="post-count">|阅读时长：1分</span>
+  </a>
+</p> 
+
+        
+        <a href="/2018/06/23/毕业后档案处理总结/" class="archive-article-date">
+  	<time datetime="2018-06-23T12:07:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-23</time>
+</a>
+        
+      </header>
+    
+	
+	<!-- 目录内容 -->
+             
+        <!-- 目录内容结束 -->
+		
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>第一次自己处理自己的档案，有点乱乱的，不过现在基本处理完了，打算写个博文总结一下。<br>网上当时查了很多资料，什么档案涉及应届毕业生身份，报到证，工龄，回国后福利待遇。<br>但实际上，处理起来很简单。</p>
+<h3 id="档案"><a href="#档案" class="headerlink" title="档案"></a>档案</h3><h4 id="留学生服务中心"><a href="#留学生服务中心" class="headerlink" title="留学生服务中心"></a>留学生服务中心</h4><p>现在留学生服务中心已经不直接接收档案了，更不用指望户口了，本人也不打算改变户口。如果要档案去留学生服务中心，你的先档案回原籍，然后去<br>留学生服务中心开调档函，到你户籍所在地再调档。这完全是浪费时间，特别是针对那些有组织关系的同学。<br>所以最简单的办法，就是档案回原籍</p>
+<h4 id="派回原籍"><a href="#派回原籍" class="headerlink" title="派回原籍"></a>派回原籍</h4><p>一般是XX市人才市场（XX市人才服务局，具体电话问问），这个学校会统一专人处理的。<br>有的学校为了确保起见，档案去的是市一级，因为涉及到派遣证问题，然后你要在市一级在处理，回到你居住的区，也就是户口本地址。<br>理论上，放在市人才服务局也是可以的。问题不大！<br>至于地址，只要百度一下就行了！<br>所以，如果有一天，学校要统计生源所在地，你的区一级千万别搞错了！</p>
+<h3 id="组织关系"><a href="#组织关系" class="headerlink" title="组织关系"></a>组织关系</h3><p>介绍信只能开到区县一级，区县收到你的东西后，再开到街道，街道再开，到社区，就是这么麻烦，不解释了。</p>
+
+      
+
+      
+	  				
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">事务办理</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">档案</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/事务办理//" class="article-tag-list-link color5">事务办理</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/06/23/毕业后档案处理总结/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+ 
+
+  
+    <article id="post-签证后总结" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/06/23/签证后总结/">签证后总结</a>
+    </h1>
+  
+
+<p>
+
+  <a href="javascript:;" class="archive-article-date">
+      <i class="icon-smile icon"></i> |阅读人数：<span id="/2018/06/23/签证后总结/" class="pageViews">人</span>
+	  <span class="post-count">|总字数：394字</span>
+	  <span class="post-count">|阅读时长：1分</span>
+  </a>
+</p> 
+
+        
+        <a href="/2018/06/23/签证后总结/" class="archive-article-date">
+  	<time datetime="2018-06-23T11:53:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-23</time>
+</a>
+        
+      </header>
+    
+	
+	<!-- 目录内容 -->
+             
+        <!-- 目录内容结束 -->
+		
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1.签证后是否成功，主要看签证官有没有收走你的护照。<br>2.如果被check,官方说法就是AP,那唯一办法就是等待。<br>3.签证是5年还是被check和纸条颜色没关系，唯一要看的就是给你纸右上角的年限，还有签证官申明是否要补充材料。<br>4.签证当天可以查看护照状态，一般显示是护照仍在大使馆中，一般等待两周以后，状态更新，再查护照状态就是 ‘你所输入的护照号码并没有状态’<br>我是2018-6-05签证，2018-6-23查的时候显示你所输入的护照号码并没有状态。<br>5.签证过程中，照片只要能在网上填表阶段上传成功签证照片一般就没问题，签证官也不需要你的照片。因此，做好一开始就去照相馆拍张好的签证照片。<br>6.如果签证官看了你的I-20，然后收走了你的study plan,CV,导师信息，那基本就是check了。<br>7.打疫苗建议不用等签证! 没必要省那个钱，尤其是不知道签证状态。<br>8.签证状态一般有两次更新，第一次时间显示就是你签证那天时间，然后更新完后显示的是两天后的日期,06-Jun-2018。<br><img src="/2018/06/23/签证后总结/1.png" alt="签证状态"><br>9.一般来说，签证没有定下来，无法订机票，当然也可以预定那些签证被拒可退钱的机票，但我没有试过。</p>
+
+      
+
+      
+	  				
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">留学</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">签证</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/留学//" class="article-tag-list-link color3">留学</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/06/23/签证后总结/">展开全文 >></a>
         </p>
       
 
@@ -391,29 +1163,29 @@
  
 
   
-    <article id="post-记录那些网文作者" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-思科VPN访问受限解决办法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/05/25/记录那些网文作者/">记录那些网文和漫画作者</a>
+      <a class="article-title" href="/2018/05/25/思科VPN访问受限解决办法/">思科VPN访问受限解决办法</a>
     </h1>
   
 
 <p>
 
   <a href="javascript:;" class="archive-article-date">
-      <i class="icon-smile icon"></i> |阅读人数：<span id="/2018/05/25/记录那些网文作者/" class="pageViews">人</span>
-	  <span class="post-count">|总字数：360字</span>
+      <i class="icon-smile icon"></i> |阅读人数：<span id="/2018/05/25/思科VPN访问受限解决办法/" class="pageViews">人</span>
+	  <span class="post-count">|总字数：21字</span>
 	  <span class="post-count">|阅读时长：1分</span>
   </a>
 </p> 
 
         
-        <a href="/2018/05/25/记录那些网文作者/" class="archive-article-date">
-  	<time datetime="2018-05-25T06:17:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-25</time>
+        <a href="/2018/05/25/思科VPN访问受限解决办法/" class="archive-article-date">
+  	<time datetime="2018-05-25T10:53:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-25</time>
 </a>
         
       </header>
@@ -425,11 +1197,7 @@
 		
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="网文"><a href="#网文" class="headerlink" title="网文"></a>网文</h3><p>1.<a href="https://baike.baidu.com/item/%E6%98%A7%E5%B0%8F%E7%8E%84/10353907?fr=aladdin" target="_blank" rel="noopener">昧小玄</a><br>代表作：《亚夏微光》<br>理由：初中时，在《古今奇幻》上看到她的文章，至今记得女主人公叫：阿佩！之后作者不再写作，杳无音讯。2018年5月25偶然找了她的微博。。。。不过没打算加。。。<br>目前已经开始出书了：芒来小姐 主打情感专栏 T_T</p>
-<p>2.<a href="https://baike.baidu.com/item/%E6%95%B0%E6%8D%AE%E4%B8%89%E5%9B%BD/16496744" target="_blank" rel="noopener">三卷天书</a><br>代表作：《数据三国》<br>理由：算是一个流派的开创。可惜作者后期不如意，《变种新纪元》扑街了，在后来不再发表网文。起点有个ID：<a href="https://my.qidian.com/author/4593913" target="_blank" rel="noopener">中村君</a></p>
-<h3 id="轻小说SF"><a href="#轻小说SF" class="headerlink" title="轻小说SF"></a>轻小说SF</h3><p>1.<a href="https://baike.baidu.com/item/%E6%95%B0%E6%8D%AE%E4%B8%89%E5%9B%BD/16496744" target="_blank" rel="noopener">镰池和马</a><br>代表作：《我与女武神的新婚生活》(我高中看的时候，书名翻译是《女武神要结婚》)<br>理由：我个人感觉比魔禁好看，后来太监了，现在已经不太关注了，以后如有时间可以看看。目前来看，应该是彻底完本了！大坑！</p>
-<h3 id="漫画"><a href="#漫画" class="headerlink" title="漫画"></a>漫画</h3><p>1.<a href="">平井和正</a><br>代表作：《Wolf Guy~狼的紋章~》<br>理由：已经去世了，76岁，但这部漫画对我影响挺大的，偏向黑暗系。</p>
-<p>2.<a href="">桂正和</a><br>代表作：《IS》，《ZETMAN》<br>理由：女主有酒井法子的身影。代表了桂正和老师前期的一些恋爱观，那时还是比较单纯的。到了《ZETMAN》以后，桂正和估计对生活的反思也更上一层楼了，全程虐。<br>现在已经不看漫画了</p>
+        <p>网路，属性，更改配适器设置<br>卸载Liebao wifi NAT Driver!<br>成功上网</p>
 
       
 
@@ -444,7 +1212,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">VPN</a>
         		</li>
       		
 		</ul>
@@ -456,7 +1224,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/随笔//" class="article-tag-list-link color3">随笔</a>
+        			<a href="/categories/VPN//" class="article-tag-list-link color4">VPN</a>
         		</li>
       		
 		</ul>
@@ -465,7 +1233,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2018/05/25/记录那些网文作者/">展开全文 >></a>
+          <a class="article-more-a" href="/2018/05/25/思科VPN访问受限解决办法/">展开全文 >></a>
         </p>
       
 
@@ -497,223 +1265,10 @@
  
 
   
-    <article id="post-N3必备的句型" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/05/15/N3必备的句型/">N3必备的句型</a>
-    </h1>
-  
-
-<p>
-
-  <a href="javascript:;" class="archive-article-date">
-      <i class="icon-smile icon"></i> |阅读人数：<span id="/2018/05/15/N3必备的句型/" class="pageViews">人</span>
-	  <span class="post-count">|总字数：1,406字</span>
-	  <span class="post-count">|阅读时长：5分</span>
-  </a>
-</p> 
-
-        
-        <a href="/2018/05/15/N3必备的句型/" class="archive-article-date">
-  	<time datetime="2018-05-15T10:02:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-15</time>
-</a>
-        
-      </header>
-    
-	
-	<!-- 目录内容 -->
-             
-        <!-- 目录内容结束 -->
-		
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="N3考生必会的76条语法句型"><a href="#N3考生必会的76条语法句型" class="headerlink" title="N3考生必会的76条语法句型"></a>N3考生必会的76条语法句型</h3><p>1.お＋动词连用形＋になる／构成尊敬语，表示对方的行为动作<br>2.お＋动词连用形＋くださる／构成尊敬语，表示对方的行为动作<br>3.お＋动词连用形＋する（いたす）／构成自谦语<br>4.（动词连体形）＋つもりです／打算……<br>5.（动词推量形）う(よう)と思う／我想……<br>6.（名词）にする／表示选择、决定的结果<br>7.（动词否定形）ないで（或ずに）／不…就…；没有…就…例子：兄は　今日、鞄を　持たずに　いえをでました。哥哥没有带书包就出去了<br>8.（动词否定形）なければなりません（なければならない）／必须……；一定要……<br>9.（动词连用形）＋ていく／表示由近及远的行为或状态。……去；……下去；……过去<br>10.（动词连用形）＋てくる／表示由远及近的行为或状态。……来；……起来；…过来<br>11.（动词连用形）＋てみる／表示试探性地做某事<br></p>
-        
-          <a class="article-more-a" href="/2018/05/15/N3必备的句型/#more">more >></a>
-        
-      
-
-      
-	  				
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">日语</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">N3</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/日语//" class="article-tag-list-link color3">日语</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/05/15/N3必备的句型/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
- 
-
-  
-    <article id="post-eShipGlobal使用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/04/30/eShipGlobal使用/">eShipGlobal使用</a>
-    </h1>
-  
-
-<p>
-
-  <a href="javascript:;" class="archive-article-date">
-      <i class="icon-smile icon"></i> |阅读人数：<span id="/2018/04/30/eShipGlobal使用/" class="pageViews">人</span>
-	  <span class="post-count">|总字数：489字</span>
-	  <span class="post-count">|阅读时长：2分</span>
-  </a>
-</p> 
-
-        
-        <a href="/2018/04/30/eShipGlobal使用/" class="archive-article-date">
-  	<time datetime="2018-04-30T12:29:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-30</time>
-</a>
-        
-      </header>
-    
-	
-	<!-- 目录内容 -->
-             
-        <!-- 目录内容结束 -->
-		
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="eShipGlobal介绍"><a href="#eShipGlobal介绍" class="headerlink" title="eShipGlobal介绍"></a>eShipGlobal介绍</h3><p>eShipGlobal是一家第三方快递支付机构，可以申请本人邮寄材料或物品，让快递取件；也可以申请让对方将你需要的材料或者物品邮寄给你，由你付费，让快递到对方取件。个人使用，一般通过“Student/Scholar Login”注册（建议注册地址是自己接收快件的地址），注册后申请I-20邮寄快递单可参考以下步骤进行：</p>
-<h3 id="使用步骤"><a href="#使用步骤" class="headerlink" title="使用步骤"></a>使用步骤</h3><p>1.登陆student/scholar login，点击“Receive documents from your University（接收来自学校的文件）”左边的向下箭头<br>2.进入“University Selection”页面，点击地图上已接受offer的学校所在州简写，或者在下面“Select State”引擎中选择学校所在的州<br>3.在学校list中找到已接受offer的学校并选中<br>4.进入新的页面选择学校材料中要求的名称，本科可能是“Undergraduate Office of Admission”，研究生可能是“Graduate School”，或者是“Office of Admission”。有些学校当你选中一个名称时，下面会有提示信息，可以注意下。<br>5.进入新的页面，确认收件人信息无误后，“Type of Document（文件类型）”选择I-20（此页面有一个地方让填Student ID-学号，正式录取信基本都有，如果实在找不到，可以联系学校确认，如果还是没有的话，就填“NOSID”<br>6.进入新的页面选择邮寄方式，美国往中国邮寄多使用FedEx，不过其他也可以，看个人<br>7.进入新的页面确认收件人地址，无误后交费</p>
-<p>交费后，系统会给个人注册邮箱和对方学校注册邮箱各发一封确认邮件，学校完成I-20处理，会通过你选择的快递给你寄送I-20。</p>
-<h3 id="不满！"><a href="#不满！" class="headerlink" title="不满！"></a>不满！</h3><p>一般邮寄到中国用的都是FedEx，不得不说，价格真的太贵，USD 63.63 ！</p>
-
-      
-
-      
-	  				
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">UCSC</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">留学</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/UCSC//" class="article-tag-list-link color5">UCSC</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/04/30/eShipGlobal使用/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
- 
-
-  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    </nav>
   
 
 
@@ -732,7 +1287,7 @@
         本站总访问量：<span id="busuanzi_value_site_pv"></span>
         </span>
 		
-        <span class="post-count">| 总字数2.9k字</span>
+        <span class="post-count">| 总字数13.7k字</span>
 		   
 		<span id="timeDate">载入天数...</span>
 		<span id="times">载入时分秒...</span> 
@@ -892,11 +1447,27 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">日语</a>
+                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">N3</a>
+                <a href="javascript:void(0)" class="js-tag color5">blog</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Blog</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">yilia</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">游戏</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">LOL</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -908,6 +1479,26 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Python</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">虚拟机</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">日语</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">N3</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">LaTex</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">网站</a>
               </li>
              
@@ -916,7 +1507,27 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">事务办理</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">论文</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">打印机</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">VPN</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">档案</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">签证</a>
               </li>
              
               <li class="article-tag-list-item">
