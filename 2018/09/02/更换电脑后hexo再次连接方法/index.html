@@ -18,7 +18,7 @@
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://www.xingyehe.top/2018/09/02/更换电脑后hexo再次连接方法/1.png">
 <meta property="og:image" content="https://www.xingyehe.top/2018/09/02/更换电脑后hexo再次连接方法/2.png">
-<meta property="og:updated_time" content="2018-09-02T08:11:46.106Z">
+<meta property="og:updated_time" content="2018-09-02T08:26:12.086Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="更换电脑后hexo再次连接方法">
 <meta name="twitter:description" content="起因在出国后，发现电脑Ip变化了，‘hexo d’的命令没有反应，所以打算重新配置一下。我思考了一下，我们往github上上传的主要是master的分支，也就是生成的静态网页，原来的动态文件其实配置好的，没有什么太多的改变。我重新在f盘下创建了blog文件夹，来粘帖我原来的文件夹。 主要步骤第一步去网上下载git和nodejs，并完成安装下载网址git：https://git-scm.com/no">
@@ -195,8 +195,8 @@
 
   <a href="javascript:;" class="archive-article-date">
       <i class="icon-smile icon"></i> |阅读人数：<span id="/2018/09/02/更换电脑后hexo再次连接方法/" class="pageViews">人</span>
-	  <span class="post-count">|总字数：334字</span>
-	  <span class="post-count">|阅读时长：1分</span>
+	  <span class="post-count">|总字数：513字</span>
+	  <span class="post-count">|阅读时长：2分</span>
   </a>
 </p> 
 
@@ -217,7 +217,7 @@
             <div id="toc-article" class="toc-article">
                 <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
                 <strong class="toc-title">文章目录</strong>
-                <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#起因"><span class="toc-number">1.</span> <span class="toc-text">起因</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#主要步骤"><span class="toc-number">2.</span> <span class="toc-text">主要步骤</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#第一步"><span class="toc-number">2.1.</span> <span class="toc-text">第一步</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#第二步"><span class="toc-number">2.2.</span> <span class="toc-text">第二步</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#第三步"><span class="toc-number">2.3.</span> <span class="toc-text">第三步</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#第四步"><span class="toc-number">2.4.</span> <span class="toc-text">第四步</span></a></li></ol></li></ol>
+                <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#起因"><span class="toc-number">1.</span> <span class="toc-text">起因</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#主要步骤"><span class="toc-number">2.</span> <span class="toc-text">主要步骤</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#第一步"><span class="toc-number">2.1.</span> <span class="toc-text">第一步</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#第二步"><span class="toc-number">2.2.</span> <span class="toc-text">第二步</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#第三步"><span class="toc-number">2.3.</span> <span class="toc-text">第三步</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#第四步"><span class="toc-number">2.4.</span> <span class="toc-text">第四步</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#补充"><span class="toc-number">2.5.</span> <span class="toc-text">补充</span></a></li></ol></li></ol>
            </div>
            <script type="text/javascript">
             function showToc(){
@@ -245,6 +245,7 @@
 <h4 id="第三步"><a href="#第三步" class="headerlink" title="第三步"></a>第三步</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C &quot;你的GitHub注册邮箱&quot;</span><br><span class="line">$ ssh -T git@github.com      查看是否成功</span><br><span class="line">$ git config --global user.name &quot;你的GitHub用户名&quot;</span><br><span class="line">$ git config --global user.email&quot;你的GitHub注册邮箱&quot;</span><br></pre></td></tr></table></figure>
 <p>然后找到生成的.ssh的文件夹中的id_rsa.pub密钥，将内容全部复制，重新到自己的github账户下，粘帖<br><img src="/2018/09/02/更换电脑后hexo再次连接方法/1.png" alt="hexo再次连接方法"></p>
 <h4 id="第四步"><a href="#第四步" class="headerlink" title="第四步"></a>第四步</h4><p>复制源文件到blog文件夹下面<br>完成。<br><img src="/2018/09/02/更换电脑后hexo再次连接方法/2.png" alt="hexo再次连接方法"></p>
+<h4 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h4><p>另外一种思路，针对不打算拷贝源文件的：<a href="https://ricky.moe/2017/01/13/hexo-perfect-synchronize/" target="_blank" rel="noopener">https://ricky.moe/2017/01/13/hexo-perfect-synchronize/</a><br>即，在同一个仓库创建两个分支：<br>Hexo分支 – 用来保存所有Hexo的源文件<br>master分支 – 用来保存Hexo生成的博客文件<br>在创建GitHub Pages或者Coding Pages时，以master分支为pages分支。<br>Hexo的deploy指向master分支部署pages，git的管理指向Hexo分支。<br>我们不希望源代码泄露，所以理想方案是<br>Hexo私有仓库 – 用来保存所有Hexo的源文件<br>master公开仓库 – 用来保存Hexo生成的博客文件<br>如果不愿意花钱，那就没办法了，除非小号，但小号也有被肉的可能。</p>
 
       
 
@@ -395,8 +396,8 @@
 <nav id="article-nav">
   
   
-    <a href="/2018/07/04/联通新势力卡现状/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">联通新势力卡现状</div>
+    <a href="/2018/08/05/UCSC housing for continuing students/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">UCSC housing for continuing students</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -423,7 +424,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#起因"><span class="toc-number">1.</span> <span class="toc-text">起因</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#主要步骤"><span class="toc-number">2.</span> <span class="toc-text">主要步骤</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#第一步"><span class="toc-number">2.1.</span> <span class="toc-text">第一步</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#第二步"><span class="toc-number">2.2.</span> <span class="toc-text">第二步</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#第三步"><span class="toc-number">2.3.</span> <span class="toc-text">第三步</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#第四步"><span class="toc-number">2.4.</span> <span class="toc-text">第四步</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#起因"><span class="toc-number">1.</span> <span class="toc-text">起因</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#主要步骤"><span class="toc-number">2.</span> <span class="toc-text">主要步骤</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#第一步"><span class="toc-number">2.1.</span> <span class="toc-text">第一步</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#第二步"><span class="toc-number">2.2.</span> <span class="toc-text">第二步</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#第三步"><span class="toc-number">2.3.</span> <span class="toc-text">第三步</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#第四步"><span class="toc-number">2.4.</span> <span class="toc-text">第四步</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#补充"><span class="toc-number">2.5.</span> <span class="toc-text">补充</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -478,7 +479,7 @@ gitment.render('gitment-ctn')
         本站总访问量：<span id="busuanzi_value_site_pv"></span>
         </span>
 		
-        <span class="post-count">| 总字数15.4k字</span>
+        <span class="post-count">| 总字数17.2k字</span>
 		   
 		<span id="timeDate">载入天数...</span>
 		<span id="times">载入时分秒...</span> 
@@ -658,19 +659,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">blog</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Blog</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">yilia</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">游戏</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">LOL</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -682,11 +679,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color3">游戏</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">blog</a>
+                <a href="javascript:void(0)" class="js-tag color4">LOL</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -706,15 +707,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">LaTex</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">论文</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">事务办理</a>
+                <a href="javascript:void(0)" class="js-tag color1">LaTex</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -722,7 +719,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">打印机</a>
+                <a href="javascript:void(0)" class="js-tag color3">生活</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">事务办理</a>
               </li>
              
               <li class="article-tag-list-item">
