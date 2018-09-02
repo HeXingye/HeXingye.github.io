@@ -8,14 +8,20 @@
   <link rel="dns-prefetch" href="https://www.xingyehe.top">
   <title>更换电脑后hexo再次连接方法 | Whisper of wind</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="article">
+  <meta name="description" content="起因在出国后，发现电脑Ip变化了，‘hexo d’的命令没有反应，所以打算重新配置一下。我思考了一下，我们往github上上传的主要是master的分支，也就是生成的静态网页，原来的动态文件其实配置好的，没有什么太多的改变。我重新在f盘下创建了blog文件夹，来粘帖我原来的文件夹。 主要步骤第一步去网上下载git和nodejs，并完成安装下载网址git：https://git-scm.com/no">
+<meta name="keywords" content="Hexo,Blog,yilia">
+<meta property="og:type" content="article">
 <meta property="og:title" content="更换电脑后hexo再次连接方法">
 <meta property="og:url" content="https://www.xingyehe.top/2018/09/02/更换电脑后hexo再次连接方法/index.html">
 <meta property="og:site_name" content="Whisper of wind">
+<meta property="og:description" content="起因在出国后，发现电脑Ip变化了，‘hexo d’的命令没有反应，所以打算重新配置一下。我思考了一下，我们往github上上传的主要是master的分支，也就是生成的静态网页，原来的动态文件其实配置好的，没有什么太多的改变。我重新在f盘下创建了blog文件夹，来粘帖我原来的文件夹。 主要步骤第一步去网上下载git和nodejs，并完成安装下载网址git：https://git-scm.com/no">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-09-02T07:48:00.160Z">
+<meta property="og:image" content="https://www.xingyehe.top/2018/09/02/更换电脑后hexo再次连接方法/1.png">
+<meta property="og:updated_time" content="2018-09-02T08:09:52.409Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="更换电脑后hexo再次连接方法">
+<meta name="twitter:description" content="起因在出国后，发现电脑Ip变化了，‘hexo d’的命令没有反应，所以打算重新配置一下。我思考了一下，我们往github上上传的主要是master的分支，也就是生成的静态网页，原来的动态文件其实配置好的，没有什么太多的改变。我重新在f盘下创建了blog文件夹，来粘帖我原来的文件夹。 主要步骤第一步去网上下载git和nodejs，并完成安装下载网址git：https://git-scm.com/no">
+<meta name="twitter:image" content="https://www.xingyehe.top/2018/09/02/更换电脑后hexo再次连接方法/1.png">
   
     <link rel="alternative" href="/atom.xml" title="Whisper of wind" type="application/atom+xml">
   
@@ -188,7 +194,7 @@
 
   <a href="javascript:;" class="archive-article-date">
       <i class="icon-smile icon"></i> |阅读人数：<span id="/2018/09/02/更换电脑后hexo再次连接方法/" class="pageViews">人</span>
-	  <span class="post-count">|总字数：0字</span>
+	  <span class="post-count">|总字数：334字</span>
 	  <span class="post-count">|阅读时长：1分</span>
   </a>
 </p> 
@@ -202,12 +208,43 @@
     
 	
 	<!-- 目录内容 -->
+        
+            <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
+            <span class="btn-bg"></span>
+            <span class="btn-text">文章导航</span>
+            </p>
+            <div id="toc-article" class="toc-article">
+                <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+                <strong class="toc-title">文章目录</strong>
+                <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#起因"><span class="toc-number">1.</span> <span class="toc-text">起因</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#主要步骤"><span class="toc-number">2.</span> <span class="toc-text">主要步骤</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#第一步"><span class="toc-number">2.1.</span> <span class="toc-text">第一步</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#第二步"><span class="toc-number">2.2.</span> <span class="toc-text">第二步</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#第三步"><span class="toc-number">2.3.</span> <span class="toc-text">第三步</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#第四步"><span class="toc-number">2.4.</span> <span class="toc-text">第四步</span></a></li></ol></li></ol>
+           </div>
+           <script type="text/javascript">
+            function showToc(){
+                var toc_article = document.getElementById("toc-article");
+                var show_toc_btn = document.getElementById("show-toc-btn");
+                toc_article.setAttribute("style","display:block");
+                show_toc_btn.setAttribute("style","display:none");
+                };
+            function showBtn(){
+                var toc_article = document.getElementById("toc-article");
+                var show_toc_btn = document.getElementById("show-toc-btn");
+                toc_article.setAttribute("style","display:none");
+                show_toc_btn.setAttribute("style","display:block");
+                };
+           </script>
              
         <!-- 目录内容结束 -->
 		
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h3 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h3><p>在出国后，发现电脑Ip变化了，‘hexo d’的命令没有反应，所以打算重新配置一下。<br>我思考了一下，我们往github上上传的主要是master的分支，也就是生成的静态网页，原来的动态文件其实配置好的，没有什么太多的改变。<br>我重新在f盘下创建了blog文件夹，来粘帖我原来的文件夹。</p>
+<h3 id="主要步骤"><a href="#主要步骤" class="headerlink" title="主要步骤"></a>主要步骤</h3><h4 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h4><p>去网上下载git和nodejs，并完成安装<br>下载网址<br>git：<a href="https://git-scm.com/" target="_blank" rel="noopener">https://git-scm.com/</a><br>nodejs：<a href="https://nodejs.org/en/" target="_blank" rel="noopener">https://nodejs.org/en/</a><br>在新创建的文件夹下面，shift+邮件打开命令框<br>输入‘$ git –version’ 和 ‘$ npm –version’<br>分别显示‘git version 2.18.0.windows.1’ 和 ‘5.6.0’ 说明安装成功。</p>
+<h4 id="第二步"><a href="#第二步" class="headerlink" title="第二步"></a>第二步</h4><p>要利用hexo的指令，安装一些东西。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo -g</span><br><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure></p>
+<p>我这边最后提示安装了hexo 3.7.1</p>
+<h4 id="第三步"><a href="#第三步" class="headerlink" title="第三步"></a>第三步</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C &quot;你的GitHub注册邮箱&quot;</span><br><span class="line">$ ssh -T git@github.com      查看是否成功</span><br><span class="line">$ git config --global user.name &quot;你的GitHub用户名&quot;</span><br><span class="line">$ git config --global user.email&quot;你的GitHub注册邮箱&quot;</span><br></pre></td></tr></table></figure>
+<p>然后找到生成的.ssh的文件夹中的id_rsa.pub密钥，将内容全部复制，重新到自己的github账户下，粘帖<br><img src="/2018/09/02/更换电脑后hexo再次连接方法/1.png" alt="hexo再次连接方法"></p>
+<h4 id="第四步"><a href="#第四步" class="headerlink" title="第四步"></a>第四步</h4><p>复制源文件到blog文件夹下面<br>完成。</p>
+
       
 
       
@@ -256,8 +293,43 @@
     </div>
     <div class="article-info article-info-index">
       
+        <div class="article-pop-out tagcloud">
+          <i class="icon-tuding"></i>
+          <a class="article-tag-list-link color3">置顶</a>
+        </div>
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Hexo</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Blog</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">yilia</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Hexo//" class="article-tag-list-link color5">Hexo</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
       
 
@@ -343,6 +415,19 @@
         </div>
         
         
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#起因"><span class="toc-number">1.</span> <span class="toc-text">起因</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#主要步骤"><span class="toc-number">2.</span> <span class="toc-text">主要步骤</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#第一步"><span class="toc-number">2.1.</span> <span class="toc-text">第一步</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#第二步"><span class="toc-number">2.2.</span> <span class="toc-text">第二步</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#第三步"><span class="toc-number">2.3.</span> <span class="toc-text">第三步</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#第四步"><span class="toc-number">2.4.</span> <span class="toc-text">第四步</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
     </div>
 </aside>
 
@@ -392,7 +477,7 @@ gitment.render('gitment-ctn')
         本站总访问量：<span id="busuanzi_value_site_pv"></span>
         </span>
 		
-        <span class="post-count">| 总字数15.1k字</span>
+        <span class="post-count">| 总字数15.4k字</span>
 		   
 		<span id="timeDate">载入天数...</span>
 		<span id="times">载入时分秒...</span> 
@@ -552,14 +637,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">UCSC</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">留学</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">爬虫</a>
               </li>
              
@@ -577,6 +654,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">blog</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">UCSC</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">留学</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -620,15 +705,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">论文</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">网站</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">收藏</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">论文</a>
               </li>
              
               <li class="article-tag-list-item">

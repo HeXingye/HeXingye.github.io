@@ -174,6 +174,127 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-更换电脑后hexo再次连接方法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/09/02/更换电脑后hexo再次连接方法/">更换电脑后hexo再次连接方法</a>
+    </h1>
+  
+
+<p>
+
+  <a href="javascript:;" class="archive-article-date">
+      <i class="icon-smile icon"></i> |阅读人数：<span id="/2018/09/02/更换电脑后hexo再次连接方法/" class="pageViews">人</span>
+	  <span class="post-count">|总字数：334字</span>
+	  <span class="post-count">|阅读时长：1分</span>
+  </a>
+</p> 
+
+        
+        <a href="/2018/09/02/更换电脑后hexo再次连接方法/" class="archive-article-date">
+  	<time datetime="2018-09-02T07:48:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-02</time>
+</a>
+        
+      </header>
+    
+	
+	<!-- 目录内容 -->
+             
+        <!-- 目录内容结束 -->
+		
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h3><p>在出国后，发现电脑Ip变化了，‘hexo d’的命令没有反应，所以打算重新配置一下。<br>我思考了一下，我们往github上上传的主要是master的分支，也就是生成的静态网页，原来的动态文件其实配置好的，没有什么太多的改变。<br>我重新在f盘下创建了blog文件夹，来粘帖我原来的文件夹。</p>
+<h3 id="主要步骤"><a href="#主要步骤" class="headerlink" title="主要步骤"></a>主要步骤</h3><h4 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h4><p>去网上下载git和nodejs，并完成安装<br>下载网址<br>git：<a href="https://git-scm.com/" target="_blank" rel="noopener">https://git-scm.com/</a><br>nodejs：<a href="https://nodejs.org/en/" target="_blank" rel="noopener">https://nodejs.org/en/</a><br>在新创建的文件夹下面，shift+邮件打开命令框<br>输入‘$ git –version’ 和 ‘$ npm –version’<br>分别显示‘git version 2.18.0.windows.1’ 和 ‘5.6.0’ 说明安装成功。</p>
+<h4 id="第二步"><a href="#第二步" class="headerlink" title="第二步"></a>第二步</h4><p>要利用hexo的指令，安装一些东西。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo -g</span><br><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure></p>
+<p>我这边最后提示安装了hexo 3.7.1</p>
+<h4 id="第三步"><a href="#第三步" class="headerlink" title="第三步"></a>第三步</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C &quot;你的GitHub注册邮箱&quot;</span><br><span class="line">$ ssh -T git@github.com      查看是否成功</span><br><span class="line">$ git config --global user.name &quot;你的GitHub用户名&quot;</span><br><span class="line">$ git config --global user.email&quot;你的GitHub注册邮箱&quot;</span><br></pre></td></tr></table></figure>
+<p>然后找到生成的.ssh的文件夹中的id_rsa.pub密钥，将内容全部复制，重新到自己的github账户下，粘帖<br><img src="/2018/09/02/更换电脑后hexo再次连接方法/1.png" alt="hexo再次连接方法"></p>
+<h4 id="第四步"><a href="#第四步" class="headerlink" title="第四步"></a>第四步</h4><p>复制源文件到blog文件夹下面<br>完成。</p>
+
+      
+
+      
+	  				
+    </div>
+    <div class="article-info article-info-index">
+      
+        <div class="article-pop-out tagcloud">
+          <i class="icon-tuding"></i>
+          <a class="article-tag-list-link color3">置顶</a>
+        </div>
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Hexo</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Blog</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">yilia</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Hexo//" class="article-tag-list-link color5">Hexo</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/09/02/更换电脑后hexo再次连接方法/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+ 
+
+  
     <article id="post-VM的linux系统虚拟机和Python" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -594,85 +715,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2018/04/25/Hexo使用教程/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
- 
-
-  
-    <article id="post-更换电脑后hexo再次连接方法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/09/02/更换电脑后hexo再次连接方法/">更换电脑后hexo再次连接方法</a>
-    </h1>
-  
-
-<p>
-
-  <a href="javascript:;" class="archive-article-date">
-      <i class="icon-smile icon"></i> |阅读人数：<span id="/2018/09/02/更换电脑后hexo再次连接方法/" class="pageViews">人</span>
-	  <span class="post-count">|总字数：0字</span>
-	  <span class="post-count">|阅读时长：1分</span>
-  </a>
-</p> 
-
-        
-        <a href="/2018/09/02/更换电脑后hexo再次连接方法/" class="archive-article-date">
-  	<time datetime="2018-09-02T07:48:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-02</time>
-</a>
-        
-      </header>
-    
-	
-	<!-- 目录内容 -->
-             
-        <!-- 目录内容结束 -->
-		
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-
-      
-	  				
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/09/02/更换电脑后hexo再次连接方法/">展开全文 >></a>
         </p>
       
 
@@ -1254,7 +1296,7 @@
         本站总访问量：<span id="busuanzi_value_site_pv"></span>
         </span>
 		
-        <span class="post-count">| 总字数15.1k字</span>
+        <span class="post-count">| 总字数15.4k字</span>
 		   
 		<span id="timeDate">载入天数...</span>
 		<span id="times">载入时分秒...</span> 
@@ -1414,14 +1456,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">UCSC</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">留学</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">爬虫</a>
               </li>
              
@@ -1439,6 +1473,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">blog</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">UCSC</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">留学</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1482,15 +1524,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">论文</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">网站</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">收藏</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">论文</a>
               </li>
              
               <li class="article-tag-list-item">
